@@ -126,6 +126,7 @@ nav {
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
   position: fixed;
+  z-index: 1000;
 }
 .nav-logo {
   display: flex;
@@ -317,9 +318,8 @@ nav {
 }
 
 .search-btn:hover {
-  background:var( --clr-primary-6);
-  border-color: var(--clr-grey-6);
-  color: white;
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #0056b3;
 }
 
 /*Login/Logout*/
@@ -370,9 +370,8 @@ nav {
 
 .login-btn:hover,
 .Sign-up-btn:hover {
-  background:var( --clr-primary-6);
-  border-color: var(--clr-grey-6);
-  color: white;
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #0056b3;
 }
 
 

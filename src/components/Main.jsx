@@ -1,5 +1,6 @@
 import React from "react";
 import Loading from './Loading'
+import Courses from "./Courses-cards";
 import "./styles/Main.css"
 
 const Main = ()=>{
@@ -19,9 +20,56 @@ const Main = ()=>{
                     <img className="main-img" src="https://www.busuu.com/user/pages/home/_01-header/busuu-header-hello.png" alt="education"/>
                 </div>
             </div>
-            <div className="slider">
-                
+            <div className="language-selector">
+                <h1>Which Language do you want to learn?</h1>
+             <div className="languages">
+                <div class="language-card" data-lang="English">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English"/>
+                    <p>English</p>
+                </div>
+                <div class="language-card" data-lang="German">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="German"/>
+                    <p>German</p>
+                </div>
+                <div class="language-card" data-lang="Spanish">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Spanish"/>
+                    <p>Spanish</p>
+                </div>
+                <div class="language-card" data-lang="French">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="French"/>
+                    <p>French</p>
+                </div>
+                <div class="language-card" data-lang="Ukrainian">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukrainian"/>
+                    <p>Ukrainian</p>
+                </div>
+              </div>
             </div>
+            <div className="aboutUs-selector">
+                <div className="aboutUs-container">
+                    <div className="aboutUs-content">
+                    <h1>About Us</h1>
+                    <p>
+                        Welcome to <span className="span">Academy</span>, your trusted partner in learning foreign languages. 
+                        At Academy, <span className="span">we believe that language is the key to connecting people across cultures</span>, 
+                        and our mission is to make language learning accessible, engaging, and effective for everyone.
+                    </p>
+                    <ul>
+                        <li>🌍 Learn over 10 languages including English, Spanish, French, German, and more.</li>
+                        <li>📚 Tailored courses for beginners, intermediate, and advanced learners.</li>
+                        <li>🎓 Expert instructors with years of experience in teaching.</li>
+                        <li>💻 Online and offline classes to suit your schedule.</li>
+                        <li>🤝 Join a global community of language learners.</li>
+                    </ul>
+                    <h3>Do you want know more?</h3>
+                    <button className="aboutUs-btn">More about us</button>
+                    </div>
+                        <div className="aboutUs-image">
+                        <img src="https://t1.unipage.net/src/wwskas.png" alt="Learning Languages" />
+                    </div>
+                </div>
+            </div>
+            <Courses/>
         </main>
     )
 }
