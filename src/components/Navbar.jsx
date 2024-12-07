@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
 import logo from '../pictures/logo.svg';
 import './styles/Navbar.css';
@@ -11,7 +12,7 @@ const Navbar =()=>{
                 <div className='nav-header'>
                     <div className='nav-logo'>
                         <img src={logo} alt='logo'/>
-                        <div className='logo-name'>ACADEMY</div>
+                        <div className='logo-name'><Link to='/'>ACADEMY</Link></div>
                     </div>
                 </div>
                 <div className='link-container'>
