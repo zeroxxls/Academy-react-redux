@@ -1,0 +1,378 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: space-between;
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+  position: fixed;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.nav-logo img{
+  width: 80px;
+  height: auto;
+}
+.logo-name{
+  font-size: 1.7rem;
+  padding-left: 20px;
+  font-weight: Bold;
+  background: linear-gradient(#000066, #6699ff);
+  background-clip: text; /* Стандартное свойство */
+  -webkit-background-clip: text; /* Для браузеров на основе WebKit */
+  color: transparent; /* Универсальное свойство для прозрачного текста */
+  -webkit-text-fill-color: transparent; /* Для WebKit-браузеров */
+}
+.logo {
+  height: 10px;
+}
+
+.links a {
+  color: var(--clr-grey-3);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.5rem;
+}
+
+.links-container {
+
+  overflow: hidden;
+  transition: var(--transition);
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 800px;
+    margin-left: 50px;
+    margin-top: 0 auto;
+    margin-right: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  .nav-side{
+    margin-left: 120px;
+    margin-top: 0 auto;
+    margin-right: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .links-container {
+      height: auto !important;
+    }
+    .links {
+      display: flex;
+    }
+    .links a {
+      padding: 0;
+      margin: 0 0.5rem;
+    }
+    .links a:hover {
+      padding: 0;
+      background: transparent;
+    }
+    .dropdown-btn{
+      padding: 0;
+      margin: 0 0.5rem;
+    }
+
+        /* Контейнер для выпадающего списка */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  /* Кнопка для открытия списка */
+  .dropdown-btn {
+    color: var(--clr-grey-3);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    background-color: transparent;
+    border: none;
+    
+  }
+  .dropdown-btn:hover{
+  color: var(--clr-primary-5);
+  }
+
+  /* Выпадающий список (изначально скрыт) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: var(--clr-grey-3);
+    cursor: pointer;
+  }
+  /* Стиль для кнопок внутри выпадающего списка */
+  .dropdown-content button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .dropdown-content button:hover {
+    background-color: #ddd;
+  }
+
+  /* Показываем список при наведении */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+} 
+
+/*search*/
+/* Search Section */
+.section-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  height: 100%; /* Унаследует высоту от родителя, если нужно */
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  height: 3rem; /* Настройте высоту, чтобы соответствовала основной части */
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%; /* Унаследует высоту от родителя */
+}
+
+.form-control input {
+  flex: 1;
+  border: 1px solid var(--clr-primary-1);
+  background: var(--clr-white);
+  border-radius: var(--radius) 0 0 var(--radius); /* Скругление только слева */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  height: 100%; /* Высота совпадает с родителем */
+}
+
+.search-btn {
+  background: transparent;
+  color: black;
+  border: solid;
+  border-width: 1px;
+  border-radius: 1px ;
+  border-left: 0px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  height: 100%; /* Высота совпадает с родителем */
+}
+
+.search-btn:hover {
+  background:var( --clr-primary-6);
+  border-color: var(--clr-grey-6);
+  color: white;
+}
+
+/*Login/Logout*/
+
+.login-side{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 100px;
+}
+
+.section-login {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+}
+
+.form-login-control{
+  display: flex;
+}
+
+.login-btn,
+.Sign-up-btn{
+  background: transparent;
+  color: black;
+  border: solid;
+  border-width: 1px;
+  border-radius: 1px ;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  height: 48px;
+  width: 92px;
+}
+
+.login-btn{
+  border-right: none;
+}
+.Sign-up-btn{
+  border-radius:0 var(--radius) var(--radius) 0   ;
+}
+
+.login-btn:hover,
+.Sign-up-btn:hover {
+  background:var( --clr-primary-6);
+  border-color: var(--clr-grey-6);
+  color: white;
+}
+
+
