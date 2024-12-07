@@ -16,7 +16,7 @@ const Main = ()=>{
                         </div>
                     </div>
                 </div>
-                <div className="top-name-right">
+                <div className="top-main-right">
                     <img className="main-img" src="https://www.busuu.com/user/pages/home/_01-header/busuu-header-hello.png" alt="education"/>
                 </div>
             </div>

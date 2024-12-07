@@ -122,11 +122,46 @@ p {
 
 nav {
   display: flex;
-  align-items: space-between;
+  flex-wrap: wrap; /* Позволяет содержимому переноситься */
+  align-items: center;
+  justify-content: space-between; /* Разделяем элементы */
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
   position: fixed;
+  top: 0;
+  width: 100%; /* Растягиваем на всю ширину */
   z-index: 1000;
+  padding: 0 1rem;
+}
+.nav-center{
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.nav-side, .login-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto; /* Толкаем вправо */
+}
+
+.links-container, .dropdown, .section-search, .section-login {
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-center, .nav-side, .login-side {
+    flex-direction: column; /* Содержимое вниз на маленьких экранах */
+    align-items: flex-start;
+  }
+
+  .links a {
+    margin: 0.5rem 0; /* Отступы между ссылками */
+  }
+
+  .dropdown-btn, .login-btn, .Sign-up-btn {
+    margin-top: 0.5rem;
+  }
 }
 .nav-logo {
   display: flex;
