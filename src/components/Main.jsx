@@ -51,8 +51,8 @@ const Main = ()=>{
                     <div className="aboutUs-content">
                     <h1>About Us</h1>
                     <p>
-                        Welcome to <span className="span">Lingua Pro</span>, your trusted partner in learning foreign languages. 
-                        At Lingua Pro, <span className="span">we believe that language is the key to connecting people across cultures</span>, 
+                        Welcome to <span className="span">DevTalk Academy</span>, your trusted partner in learning foreign languages. 
+                        At DevTalk Academy, <span className="span">we believe that language is the key to connecting people across cultures</span>, 
                         and our mission is to make language learning accessible, engaging, and effective for everyone.
                     </p>
                     <ul>
