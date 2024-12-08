@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import Loading from './Loading'
-import Courses from "./Courses-cards";
 import "./styles/Main.css"
+import CoursesCards from "./Courses-cards";
 
 const Main = ()=>{
     return(
@@ -62,14 +63,14 @@ const Main = ()=>{
                         <li>🤝 Join a global community of language learners.</li>
                     </ul>
                     <h3>Do you want know more?</h3>
-                    <button className="aboutUs-btn">More about us</button>
+                 <Link to="/about"><button className="aboutUs-btn">More about us</button></Link>
                     </div>
                         <div className="aboutUs-image">
                         <img src="https://t1.unipage.net/src/wwskas.png" alt="Learning Languages" />
                     </div>
                 </div>
             </div>
-            <Courses/>
+            <CoursesCards/>
         </main>
     )
 }

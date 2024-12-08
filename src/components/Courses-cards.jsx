@@ -1,7 +1,7 @@
 import React from "react";
 import './styles/Courses-cards.css'
 
-const Courses =()=>{
+const CoursesCards =()=>{
     return(
         <div className="courses-selector">
                 <h1>Choose your learning preference</h1>
@@ -45,4 +45,4 @@ const Courses =()=>{
     )
 }
 
-export default Courses
+export default CoursesCards

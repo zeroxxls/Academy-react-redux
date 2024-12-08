@@ -2,8 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 //pages
 import Home from './pages/Home';
+import Languages from './pages/Languages'
+import Courses from './pages/Courses';
+import Error from './pages/Error'
 import About from './pages/About';
-import Error from './pages/Error';
 //components
 import Navbar from './components/Navbar';
 import Main from './components/Main';
@@ -16,6 +18,8 @@ const App =()=>{
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/languages" element={<Languages />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
