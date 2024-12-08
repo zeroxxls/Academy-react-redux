@@ -132,7 +132,7 @@ body {
 .top-main-right{
   justify-content: center;
   display: flex;
-  max-width: 31.5rem;
+  max-width: 60rem;
   margin-top: 4.9375rem;
   margin-right: 12.5rem;
   margin-left: 5rem;
@@ -141,8 +141,9 @@ body {
 }
 
 .main-img{
-  max-width: 31.5rem;
-  max-height: 26.875rem;
+  max-width: 50rem;
+  max-height: 30rem;
+  margin-top: 20px;
   -o-object-fit: contain;
   object-fit: contain;
 }
