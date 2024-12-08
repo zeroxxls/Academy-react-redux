@@ -27,22 +27,25 @@ main {
     justify-content: center;
     padding: 20px;
     background-color: #f4f4f4;
-    color: #424242;
+    color: #333;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   
   .about-content h2 {
     font-size: 2rem;
-    color: #424242;
+    color: #333;
     margin-bottom: 20px;
   }
   
   .about-content p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     max-width: 800px;
     line-height: 1.6;
-    color: #424242;
+    color: #333;
+
   }
   
   .about-content ul {
@@ -78,8 +81,4 @@ main {
     .about-content ul li {
       font-size: 1rem;
     }
-  }
-
-  .click{
-    color: black;
   }

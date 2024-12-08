@@ -16,9 +16,9 @@ const AboutInfo =()=>{
     </div>
     <div class="about-content">
       <div class="about-content-left">
-        <h2>About Academy</h2>
+        <h2>About Us</h2>
         <p>
-          Welcome to <strong>Academy</strong>, a leading institution dedicated to helping individuals master foreign languages with confidence and ease. Whether you’re a beginner or seeking to perfect your skills, Academy offers a wide range of courses tailored to suit your needs.
+          Welcome to <strong>LinguaPro</strong>, a leading institution dedicated to helping individuals master foreign languages with confidence and ease. Whether you’re a beginner or seeking to perfect your skills, Academy offers a wide range of courses tailored to suit your needs.
         </p>
         <p>
           Our mission is to  <strong>foster communication and cultural exchange</strong> through <strong>innovative teaching methods</strong> and a team of experienced educators.
