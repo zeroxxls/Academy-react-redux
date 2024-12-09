@@ -1,8 +1,9 @@
 import React from "react";
+import LanguagesInfo from "../components/pages-components/Languages-info";
 
 const Languages =()=>{
     return(
-        <div>Languages</div>
+        <LanguagesInfo/>
     )
 }
 

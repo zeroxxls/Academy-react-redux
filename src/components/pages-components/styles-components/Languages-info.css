@@ -1,0 +1,190 @@
+.top-languages-page {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.top-languages-page-img {
+    margin-top: 50px;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top-languages-page-content-left{
+    position: absolute; /* Абсолютно позиционируется относительно .container */
+    top: 20%; /* Расположен на 10% ниже верхнего края контейнера */
+    left: 2%; /* Расположен на 10% правее левого края контейнера */
+    z-index: 10; /* Размещает контент выше изображения */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для читаемости */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.top-languages-page-content-left ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .top-languages-page-content-left ul li {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .top-languages-page-content-left ul li::before {
+    content: "•";
+    margin-right: 10px;
+    color: #ffffff; 
+    font-size: 1.5rem;
+  }
+
+  .top-languages-page-content-right{
+    position: absolute; 
+
+    bottom: 20%; 
+    right: 2%; 
+    z-index: 10; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  .top-languages-page-content-right h2{
+    margin-bottom: 50px;
+  }
+
+  .top-languages-page-content-right-btn{
+    pointer-events: all;
+    box-shadow: 0 .125rem .25rem 0 rgba(0, 0, 0, .3);
+    font-weight: 700;
+    width: 15rem;
+    margin: 0 0 2.375rem;
+    border: .125rem solid #11ee92;
+    color: #252b2f;
+    background-color: #11ee92;
+    border-radius: 2.815rem;
+    margin: 0 .3125rem .3125rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: normal;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .2s;
+  }
+
+/* Контейнер для карточек */
+.languages-page-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 20px;
+}
+
+.languages-page-right{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    margin-top: 20px;
+    align-items: end;
+    gap: 20px;
+}
+
+/* Карточка языка */
+.language-info-card {
+    display: flex;
+    align-items: flex-start; /* Выравнивание элементов по верхнему краю */
+    gap: 20px; /* Пространство между флагом и текстом */
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-left: 100px;
+}
+
+.language-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Изображение флага */
+.language-info-card img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+/* Контент карточки */
+.language-card-content {
+    padding: 15px;
+}
+
+.language-card-content h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #0077cc;
+}
+
+.language-card-content h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #0077cc;
+}
+
+.language-card-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #555;
+}
+.language-card-content ul{
+    list-style: none;
+    padding: 0;
+}
+
+.language-card-content ul li{
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #555;
+}
+
+.language-card-content ul li::before {
+    content: "•";
+    margin-right: 10px;
+    color: #000000; 
+    font-size: 1.5rem;
+  }
+
+.intro-page-right{
+    max-width: 1000px;
+}
+.intro-page-right img{
+    width: 100%;
+    height: 545px;
+    border-radius: 10px;
+    margin-left: 85px;
+}
+
+.intro-page-left{
+    max-width: 1000px;
+}
+.intro-page-left img{
+    width: 100%;
+    height: 545px;
+    border-radius: 10px;
+    margin-right: 85px;
+}  
