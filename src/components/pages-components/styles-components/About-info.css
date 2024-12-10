@@ -55,6 +55,20 @@ main {
     color: #333;
 
   }
+  .about-content h2{
+    font-size: 30px;
+    color: #111e4b;
+    border-bottom: 2px solid #1d2594;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .about-content h3{
+    font-size: 30px;
+    color: #111e4b;
+    border-bottom: 2px solid #1d2594;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
   
   .about-content ul {
     list-style: none;

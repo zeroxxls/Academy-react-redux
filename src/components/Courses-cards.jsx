@@ -18,7 +18,7 @@ const CoursesCards =()=>{
                        <Link to="/light"><button>More about Light</button></Link> 
                     </div>
                     <div className="courses-card" data-course="Intensive">
-                        <img src="https://cdn-ru.bitrix24.ru/b17754030/landing/57e/57ec19534f9111b14e1d08aae8ce130d/pexels-polina-zimmerman-3747446_2x_1x.jpg" alt="light"/>
+                        <img src="https://cdn-ru.bitrix24.ru/b17754030/landing/57e/57ec19534f9111b14e1d08aae8ce130d/pexels-polina-zimmerman-3747446_2x_1x.jpg" alt="intensive"/>
                         <Link to="/intesive"><h3 className="intensive-course">Intensive</h3></Link>
                         <ul>
                             <li>8 lessons per month</li>
@@ -28,8 +28,8 @@ const CoursesCards =()=>{
                         </ul>
                       <Link to="/intensive"><button>More about Intensive</button></Link>  
                     </div>
-                    <div className="courses-card" data-course="light">
-                        <img src="https://www.lingoda.com/wp-content/webp-express/webp-images/uploads/2024/08/homepage-revamp-course-cards-3.png.webp" alt="light"/>
+                    <div className="courses-card" data-course="pro">
+                        <img src="https://www.lingoda.com/wp-content/webp-express/webp-images/uploads/2024/08/homepage-revamp-course-cards-3.png.webp" alt="pro"/>
                        <Link to="/pro"><h3 className="pro-course">Pro</h3></Link> 
                         <ul>
                             <li>12 lessons per month</li>

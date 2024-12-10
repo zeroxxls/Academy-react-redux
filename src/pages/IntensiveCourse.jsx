@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import IntensiveCourseInfo from "../components/pages-components/IntensiveCourse-info";
 
 const IntensiveCourse=()=>{
     return(
-        <div>intensive</div>
+       <IntensiveCourseInfo/>
     )
 }
 
