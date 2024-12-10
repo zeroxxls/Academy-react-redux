@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import LightCourseInfo from "../components/pages-components/LightCourse-info";
 
 const LightCourse=()=>{
     return(
-        <div>light</div>
+        <LightCourseInfo/>
     )
 }
 
