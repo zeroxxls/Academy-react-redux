@@ -84,6 +84,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: start;
+    margin-bottom: 150px;
     gap: 20px;
 }
 
@@ -91,7 +92,7 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 100px;
-    margin-top: 20px;
+    margin-bottom: 150px;
     align-items: end;
     gap: 20px;
 }
@@ -180,7 +181,7 @@
 }
 
 .intro-page-left{
-    max-width: 1000px;
+    max-width: 902px;
 }
 .intro-page-left img{
     width: 100%;
@@ -188,3 +189,13 @@
     border-radius: 10px;
     margin-right: 85px;
 }  
+.intro-page-right{
+    max-width: 902px;
+}
+.intro-page-right img{
+    width: 100%;
+    height: 545px;
+    border-radius: 10px;
+    margin-left: 85px;
+}  
+

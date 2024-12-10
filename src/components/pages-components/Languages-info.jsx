@@ -25,7 +25,7 @@ const LanguagesInfo=()=>{
             </div>
                 <div className="languages-page-left">
                     <div class="language-info-card" data-lang="English">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English"/>
+                            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English" />
                         <div className="language-card-content">
                             <h2>English</h2>
                             <p>English is the global language of communication, science, technology, and business. Learning English opens doors to studying at prestigious universities, working for leading companies, and traveling freely.</p>
@@ -43,11 +43,14 @@ const LanguagesInfo=()=>{
                             </ul>
                         </div>
                     </div>
-                    <div className="intro-page-right">
-                        <img src="https://www.bethel.edu/blog/wp-content/uploads/2021/08/future-college-student.jpg"/>
+                    <div className="intro-page-left">
+                        <img src="https://assets.ad-magazin.de/photos/657ae3cc96d722cf32959a69/16:9/w_2580,c_limit/GettyImages-1397651644.jpg" alt="intro-english"/>
                     </div>
                 </div>
                 <div className="languages-page-right">
+                <div className="intro-page-right">
+                        <img src="https://www.deutschland.de/sites/default/files/media/image/T%C3%BCD_Politisches_Zentrum-Berlin_Reichstagsgeb%C3%A4ude.jpg" alt="intro-german"/>
+                    </div>
                     <div class="language-info-card" data-lang="German">
                         <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="German"/>
                         <div className="language-card-content">
@@ -58,6 +61,7 @@ const LanguagesInfo=()=>{
                                 <li>Proficiency in German grammar and pronunciation.</li>
                                 <li>Courses designed to prepare for exams (TestDaF, Goethe-Zertifikat).</li>
                                 <li>Focus on conversational practice and professional vocabulary.</li>
+                                <li>Professional Edge: Master industry-specific vocabulary for fields like technology, business, medicine, and engineering.</li>
                             </ul>
                             <h3>Who It's For</h3>
                             <ul>
@@ -79,6 +83,7 @@ const LanguagesInfo=()=>{
                                 <li>Lessons on Spanish grammar and conversational language.</li>
                                 <li>Understanding of regional language variations (Spain, Latin America).</li>
                                 <li>Preparation for international exams (DELE, SIELE).</li>
+                                <li>Professional Opportunities: Gain industry-specific language skills for international business, tourism, and diplomacy.</li>
                             </ul>
                             <h3>Who It's For</h3>
                             <ul>
@@ -88,11 +93,14 @@ const LanguagesInfo=()=>{
                             </ul>
                         </div>
                     </div>
-                    <div className="intro-page-right">
-                        <img src="https://www.bethel.edu/blog/wp-content/uploads/2021/08/future-college-student.jpg"/>
+                    <div className="intro-page-left">
+                        <img src="https://www.bu.edu/abroad/files/2016/06/madrid.jpg" alt="intro-spain"/>
                     </div>
                 </div>
                 <div className="languages-page-right">
+                <div className="intro-page-right">
+                        <img src="https://www.ekathimerini.com/wp-content/uploads/2024/07/Sorbonne-University-shutterstock-scaled.jpg?v=1720896507" alt="intro-french"/>
+                    </div>
                     <div class="language-info-card" data-lang="French">
                         <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="French"/>
                         <div className="language-card-content">
@@ -103,6 +111,7 @@ const LanguagesInfo=()=>{
                                 <li>Mastery of fundamental grammar and sentence building.</li>
                                 <li>Immersion in the culture of France and French-speaking countries.</li>
                                 <li>Preparation for DELF and DALF exams.</li>
+                                <li>Professional Vocabulary: Gain expertise in business French, tourism-related language, and formal writing skills.</li>
                             </ul>
                             <h3>Who It's For</h3>
                             <ul>
@@ -124,6 +133,7 @@ const LanguagesInfo=()=>{
                                 <li>Mastery of essential grammar and pronunciation.</li>
                                 <li>Development of reading, writing, and speaking skills.</li>
                                 <li>Immersion in Ukrainian culture, songs, and literature.</li>
+                                <li>Professional Development: Acquire language skills for industries like IT, agriculture, and tourism.</li>
                             </ul>
                             <h3>Who It's For</h3>
                             <ul>
@@ -133,8 +143,8 @@ const LanguagesInfo=()=>{
                             </ul>
                         </div>
                     </div>
-                    <div className="intro-page-right">
-                        <img src="https://www.bethel.edu/blog/wp-content/uploads/2021/08/future-college-student.jpg"/>
+                    <div className="intro-page-left">
+                        <img src="https://pesaagora.com/wp-content/uploads/2022/03/National-Technical-University-of-Ukraine-Igor-Sikorsky-Kyiv-Polytechnic-Institute-NTUU-KPI-camous-610x168-2.jpeg" alt="intro-ukraine"/>
                     </div>
                 </div>
                 <Footer/>
