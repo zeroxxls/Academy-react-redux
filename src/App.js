@@ -11,6 +11,11 @@ import Navbar from './components/Navbar';
 import LightCourse from './pages/LightCourse';
 import IntensiveCourse from './pages/IntensiveCourse';
 import ProCourse from './pages/ProCourse';
+import EnglishCourse from './pages/EnglishCourse';
+import GermanCourse from './pages/GermanCourse';
+import SpainCourse from './pages/SpainCourse';
+import FrenchCourse from './pages/FrenchCourse';
+import UkrainianCourse from './pages/UkrainianCourse';
 
 const App =()=>{
   return(
@@ -26,6 +31,11 @@ const App =()=>{
         <Route path='/light' element={<LightCourse/>}/>
         <Route path='/intensive' element={<IntensiveCourse/>}/>
         <Route path='/pro' element={<ProCourse/>}/>
+        <Route path='/english' element={<EnglishCourse/>}/>
+        <Route path='/german' element={<GermanCourse/>}/>
+        <Route path='/spain' element={<SpainCourse/>}/>
+        <Route path='/french' element={<FrenchCourse/>}/>
+        <Route path='/ukrainian' element={<UkrainianCourse/>}/>
       </Routes>
     </Router>
     </div>
