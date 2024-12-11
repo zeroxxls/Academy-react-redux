@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ProCourseInfo from "../components/pages-components/ProCourse-info";
 
 const ProCourse=()=>{
     return(
-        <div>pro</div>
+        <ProCourseInfo/>
     )
 }
 
