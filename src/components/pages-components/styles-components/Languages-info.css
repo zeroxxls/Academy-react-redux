@@ -12,11 +12,11 @@
 }
 
 .top-languages-page-content-left{
-    position: absolute; /* Абсолютно позиционируется относительно .container */
-    top: 20%; /* Расположен на 10% ниже верхнего края контейнера */
-    left: 2%; /* Расположен на 10% правее левого края контейнера */
-    z-index: 10; /* Размещает контент выше изображения */
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для читаемости */
+    position: absolute;
+    top: 20%; 
+    left: 2%; 
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5); 
     color: white;
     padding: 20px;
     border-radius: 10px;
