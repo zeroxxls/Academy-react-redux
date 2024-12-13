@@ -1,0 +1,105 @@
+.top-french-card {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.top-french-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: blur(4px);
+}
+
+.top-french-card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    max-width: 450px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.flag-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.french-name-course {
+    color: #0077cc;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.top-french-card-content h4 {
+    color: #0077cc;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.top-french-card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-french-card-content ul li {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.top-french-card-content ul li::before{
+    content: "•";
+    margin-right: 10px;
+    color: #000000; 
+    font-size: 1.5rem;
+}
+
+.top-french-card-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.choose-course-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.choose-course-button:hover {
+    background-color: #0056b3;
+}
