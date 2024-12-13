@@ -42,8 +42,12 @@ const Navbar =()=>{
                 <section className='section-login'>
                     <form className='login-form'>
                         <div className='form-login-control'>
-                            <button className='login-btn'>Login</button>
-                            <button className='Sign-up-btn'>Sign Up</button>
+                            <Link to="/loginpage">
+                                <button className='login-btn'>Login</button>
+                            </Link>
+                            <Link to="/signup">
+                                <button className='Sign-up-btn'>Sign Up</button>
+                            </Link>
                         </div>
                     </form>
                 </section>

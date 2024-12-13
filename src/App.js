@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 //pages
 import Home from './pages/Home';
 import Languages from './pages/Languages'
@@ -16,29 +16,42 @@ import GermanCourse from './pages/GermanCourse';
 import SpainCourse from './pages/SpainCourse';
 import FrenchCourse from './pages/FrenchCourse';
 import UkrainianCourse from './pages/UkrainianCourse';
+import LoginPage from './components/LoginPage';
+import SignUp from './components/SignUp';
 
 const App =()=>{
   return(
-    <div>
-<Router>
-      <Navbar />
+    <Router>
+      <AppContent/>
+    </Router>
+  )
+};
+
+const AppContent=()=>{
+  const location = useLocation();
+  const pathsWithoutNavbar = ["/loginpage", "/signup"];
+  return(
+    <>
+    {!pathsWithoutNavbar.includes(location.pathname) && <Navbar />}
+      {/* Маршруты приложения */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/languages" element={<Languages />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
-        <Route path='/light' element={<LightCourse/>}/>
-        <Route path='/intensive' element={<IntensiveCourse/>}/>
-        <Route path='/pro' element={<ProCourse/>}/>
-        <Route path='/english' element={<EnglishCourse/>}/>
-        <Route path='/german' element={<GermanCourse/>}/>
-        <Route path='/spain' element={<SpainCourse/>}/>
-        <Route path='/french' element={<FrenchCourse/>}/>
-        <Route path='/ukrainian' element={<UkrainianCourse/>}/>
+        <Route path="/light" element={<LightCourse />} />
+        <Route path="/intensive" element={<IntensiveCourse />} />
+        <Route path="/pro" element={<ProCourse />} />
+        <Route path="/english" element={<EnglishCourse />} />
+        <Route path="/german" element={<GermanCourse />} />
+        <Route path="/spain" element={<SpainCourse />} />
+        <Route path="/french" element={<FrenchCourse />} />
+        <Route path="/ukrainian" element={<UkrainianCourse />} />
+        <Route path="/loginpage" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
-    </Router>
-    </div>
+    </>
   )
 }
 
