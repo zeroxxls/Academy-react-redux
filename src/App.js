@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectUser } from './features/userSlice'; 
+import { useSelector, useDispatch } from "react-redux";
+import { login, logout } from "./features/userSlice"; 
+import { selectUser } from './features/userSlice';
 //pages
 import Home from './pages/Home';
 import Languages from './pages/Languages';
@@ -33,9 +34,23 @@ const App = () => {
 const AppContent = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
   const pathsWithoutNavbar = ["/loginpage", "/signup", "/logoutpage"];
+
+  // Проверка токена при первой загрузке приложения
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      const userInfo = JSON.parse(localStorage.getItem("user"));
+      if (userInfo) {
+        dispatch(login({ name: userInfo.name, email: userInfo.email, loggedIn: true }));
+      }
+    } else {
+      dispatch(logout());
+    }
+  }, [dispatch]);
 
   // Перенаправление после логина
   useEffect(() => {
@@ -51,7 +66,7 @@ const AppContent = () => {
 
       <Routes>
         {/* Условные маршруты для логина и логаута */}
-        {!user ? (
+        {!user?.loggedIn ? (
           <>
             <Route path="/loginpage" element={<LoginPage />} />
             <Route path="/signup" element={<SignUp />} />

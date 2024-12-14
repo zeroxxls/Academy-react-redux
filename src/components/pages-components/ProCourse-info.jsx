@@ -55,13 +55,13 @@ const ProCourseInfo=()=>{
             <button>Buy</button>
         </div>
     </div>
-    <div class="Pro-review-container">
-    <h1 class="Pro-review-title">Information of the "Pro" Course</h1>
-    <p class="Pro-review-intro">
+    <div className="Pro-review-container">
+    <h1 className="Pro-review-title">Information of the "Pro" Course</h1>
+    <p className="Pro-review-intro">
     The "Pro" course is an advanced language learning program designed for those who aspire to achieve fluency and mastery in the target language. This course combines the advantages of the basic and intensive programs while offering unique opportunities for deep language acquisition.
     </p>
 
-    <section class="Pro-course-features">
+    <section className="Pro-course-features">
         <h2>Main Features of the Course:</h2>
         <ul>
         <li><strong>12 lessons per month:</strong>Comprehensive language lessons covering advanced grammar, vocabulary, and conversational practice. This format is perfect for learners aiming to achieve a high level of language proficiency.</li>
@@ -74,7 +74,7 @@ const ProCourseInfo=()=>{
         </ul>
     </section>
 
-    <section class="Pro-course-pros-cons">
+    <section className="Pro-course-pros-cons">
         <h2>Pros of the Course:</h2>
         <ul>
             <li>Advanced language learning tailored to ambitious goals.</li>
@@ -88,14 +88,14 @@ const ProCourseInfo=()=>{
         </ul>
     </section>
 
-    <section class="Pro-course-ideal">
+    <section className="Pro-course-ideal">
         <h2>Who Is This Course Ideal For?</h2>
         <p>
         This course is ideal for ambitious learners who are committed to achieving professional-level language proficiency, value personalized mentorship, and seek certification to enhance their career or educational opportunities.
         </p>
     </section>
 
-    <section class="Pro-course-summary">
+    <section className="Pro-course-summary">
         <h2>Conclusion</h2>
         <p>
         The "Pro" course is an excellent opportunity to achieve language mastery. It’s a program for ambitious learners ready to approach language acquisition seriously, providing a key to unlocking new career and educational opportunities.

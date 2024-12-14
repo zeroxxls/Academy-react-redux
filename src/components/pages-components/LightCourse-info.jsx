@@ -47,13 +47,13 @@ const LightCourseInfo=()=>{
             <button>Buy</button>
         </div>
     </div>
-    <div class="review-container">
-    <h1 class="review-title">Information of the "Light" Course</h1>
-    <p class="review-intro">
+    <div className="review-container">
+    <h1 className="review-title">Information of the "Light" Course</h1>
+    <p className="review-intro">
     The "Light" course is an entry-level program that is perfect for those who want to try their hand at learning new material or skills without diving too deep. This course is balanced in terms of cost and content, providing a solid foundation for getting started.
     </p>
 
-    <section class="course-features">
+    <section className="course-features">
         <h2>Main Features of the Course:</h2>
         <ul>
         <li><strong>5 lessons per month:</strong> You get access to five lessons covering key topics essential for understanding the basics. This format is suitable for busy individuals.</li>
@@ -62,7 +62,7 @@ const LightCourseInfo=()=>{
         </ul>
     </section>
 
-    <section class="course-pros-cons">
+    <section className="course-pros-cons">
         <h2>Pros of the Course:</h2>
         <ul>
             <li>Affordable price ($50/month).</li>
@@ -71,14 +71,14 @@ const LightCourseInfo=()=>{
         </ul>
     </section>
 
-    <section class="course-ideal">
+    <section className="course-ideal">
         <h2>Who Is This Course Ideal For?</h2>
         <p>
         The "Light" course is perfect for beginners or those who want to try a new direction without significant financial investment. It's a good starting point for students, busy individuals, or those who prefer learning at their own pace.
         </p>
     </section>
 
-    <section class="course-summary">
+    <section className="course-summary">
         <h2>Conclusion</h2>
         <p>
         If you're looking for a basic course that provides foundational knowledge and allows for self-directed work, the "Light" course is an excellent choice. However, if you value in-depth learning, mentor support, and official certification, consider more advanced options.

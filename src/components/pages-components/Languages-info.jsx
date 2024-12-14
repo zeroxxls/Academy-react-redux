@@ -24,7 +24,7 @@ const LanguagesInfo=()=>{
                 </div>
             </div>
                 <div className="languages-page-left">
-                    <div class="language-info-card" data-lang="English">
+                    <div className="language-info-card" data-lang="English">
                             <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English" />
                         <div className="language-card-content">
                             <h2>English</h2>
@@ -73,7 +73,7 @@ const LanguagesInfo=()=>{
                     </div>
                 </div>
                 <div className="languages-page-left">
-                    <div class="language-info-card" data-lang="Spanish">
+                    <div className="language-info-card" data-lang="Spanish">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Spanish"/>
                         <div className="language-card-content">
                             <h2>Spanish</h2>
@@ -101,7 +101,7 @@ const LanguagesInfo=()=>{
                 <div className="intro-page-right">
                         <img src="https://www.ekathimerini.com/wp-content/uploads/2024/07/Sorbonne-University-shutterstock-scaled.jpg?v=1720896507" alt="intro-french"/>
                     </div>
-                    <div class="language-info-card" data-lang="French">
+                    <div className="language-info-card" data-lang="French">
                         <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="French"/>
                         <div className="language-card-content">
                             <h2>French</h2>
@@ -123,7 +123,7 @@ const LanguagesInfo=()=>{
                     </div>
                 </div>
                 <div className="languages-page-left">
-                    <div class="language-info-card" data-lang="Ukrainian">
+                    <div className="language-info-card" data-lang="Ukrainian">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukrainian"/>
                         <div className="language-card-content">
                             <h2>Ukrainian</h2>

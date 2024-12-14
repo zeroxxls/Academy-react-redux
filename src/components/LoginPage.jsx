@@ -9,17 +9,31 @@ const LoginPage = () => {
     const [password, setPassword] = useState("");    
 
     const dispatch = useDispatch();
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        dispatch(
-            login({
-                name,
-                email,
-                password,
-                loggedIn:true,
-            })
-        )
-    }
+      
+        try {
+          const response = await fetch("/api/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),
+          });
+      
+          const data = await response.json();
+          if (response.ok) {
+            alert("Successful login!");
+            localStorage.setItem("token", data.token);
+            dispatch(login({ name: data.user.name, email: data.user.email, loggedIn: true }));
+          } else {
+            alert(data.message);
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      };
+      
 
     return (
         <div className="login">

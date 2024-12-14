@@ -59,13 +59,13 @@ const IntensiveCourseInfo=()=>{
             <button>Buy</button>
         </div>
     </div>
-    <div class="Intensive-review-container">
-    <h1 class="Intensive-review-title">Information of the "Intensive" Course</h1>
-    <p class="Intensivereview-intro">
+    <div className="Intensive-review-container">
+    <h1 className="Intensive-review-title">Information of the "Intensive" Course</h1>
+    <p className="Intensivereview-intro">
     The "Intensive" course is a deep learning program, perfect for those who want to achieve significant results in the shortest time possible. This course offers a comprehensive approach, combining interactive lessons, mentor support, and practical opportunities to apply knowledge.
     </p>
 
-    <section class="Intensive-course-features">
+    <section className="Intensive-course-features">
         <h2>Main Features of the Course:</h2>
         <ul>
         <li><strong>8 lessons per month:</strong> Participants receive eight in-depth lessons that cover essential topics comprehensively. This structure is ideal for those who want a systematic approach to achieving their goals.</li>
@@ -77,7 +77,7 @@ const IntensiveCourseInfo=()=>{
         </ul>
     </section>
 
-    <section class="Intensive-course-pros-cons">
+    <section className="Intensive-course-pros-cons">
         <h2>Pros of the Course:</h2>
         <ul>
             <li>A comprehensive approach that combines theory and practice.</li>
@@ -89,14 +89,14 @@ const IntensiveCourseInfo=()=>{
         </ul>
     </section>
 
-    <section class="Intensive-course-ideal">
+    <section className="Intensive-course-ideal">
         <h2>Who Is This Course Ideal For?</h2>
         <p>
         This course is ideal for motivated individuals ready to dedicate time and effort to an intensive learning experience.
         </p>
     </section>
 
-    <section class="Intensive-course-summary">
+    <section className="Intensive-course-summary">
         <h2>Conclusion</h2>
         <p>
         The "Intensive" course provides a highly effective program for those ready to take their learning seriously and deeply. It’s the best option for focused learners who value practice and regular interaction. However, if you need flexibility or an official certificate, other options might be more suitable.

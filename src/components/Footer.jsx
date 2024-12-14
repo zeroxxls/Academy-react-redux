@@ -4,13 +4,13 @@ import './styles/Footer.css'
 
 const Footer =()=>{
     return(
-        <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-section">
+        <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-section">
             <h3>Academy</h3>
             <p>Grow yourself by learning languages ​​from anywhere in the world.</p>
           </div>
-          <div class="footer-section">
+          <div className="footer-section">
             <h4>Navigation</h4>
             <ul>
               <li><Link to="/">Home</Link></li>
@@ -18,13 +18,13 @@ const Footer =()=>{
               <li><Link to="/courses">Courses</Link></li>
             </ul>
           </div>
-          <div class="footer-section">
+          <div className="footer-section">
             <h4>Contacts</h4>
             <p>Email: support@academy.com</p>
             <p>Phone number: +123 456 7890</p>
           </div>
         </div>
-        <div class="footer-bottom">
+        <div className="footer-bottom">
           <p>&copy; 2024 Academy. All rights reserved.</p>
         </div>
       </footer>
