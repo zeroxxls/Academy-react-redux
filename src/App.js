@@ -1,13 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectUser } from './features/userSlice'; 
 //pages
 import Home from './pages/Home';
-import Languages from './pages/Languages'
+import Languages from './pages/Languages';
 import Courses from './pages/Courses';
-import Error from './pages/Error'
+import Error from './pages/Error';
 import About from './pages/About';
-//components
-import Navbar from './components/Navbar';
 import LightCourse from './pages/LightCourse';
 import IntensiveCourse from './pages/IntensiveCourse';
 import ProCourse from './pages/ProCourse';
@@ -16,30 +16,55 @@ import GermanCourse from './pages/GermanCourse';
 import SpainCourse from './pages/SpainCourse';
 import FrenchCourse from './pages/FrenchCourse';
 import UkrainianCourse from './pages/UkrainianCourse';
+//components
+import Navbar from './components/Navbar';
 import LoginPage from './components/LoginPage';
+import LogoutPage from './components/LogoutPage';
 import SignUp from './components/SignUp';
 
-const App =()=>{
-  return(
+const App = () => {
+  return (
     <Router>
-      <AppContent/>
+      <AppContent />
     </Router>
-  )
+  );
 };
 
-const AppContent=()=>{
+const AppContent = () => {
   const location = useLocation();
-  const pathsWithoutNavbar = ["/loginpage", "/signup"];
-  return(
+  const navigate = useNavigate();
+  const user = useSelector(selectUser);
+
+  const pathsWithoutNavbar = ["/loginpage", "/signup", "/logoutpage"];
+
+  // Перенаправление после логина
+  useEffect(() => {
+    if (user && location.pathname !== "/logoutpage") {
+      navigate("/logoutpage");
+    }
+  }, [user, location.pathname, navigate]);
+
+  return (
     <>
-    {!pathsWithoutNavbar.includes(location.pathname) && <Navbar />}
-      {/* Маршруты приложения */}
+      {/* Условное отображение Navbar */}
+      {!pathsWithoutNavbar.includes(location.pathname) && <Navbar />}
+
       <Routes>
+        {/* Условные маршруты для логина и логаута */}
+        {!user ? (
+          <>
+            <Route path="/loginpage" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUp />} />
+          </>
+        ) : (
+          <Route path="/logoutpage" element={<LogoutPage />} />
+        )}
+
+        {/* Общедоступные маршруты */}
         <Route path="/" element={<Home />} />
         <Route path="/languages" element={<Languages />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error />} />
         <Route path="/light" element={<LightCourse />} />
         <Route path="/intensive" element={<IntensiveCourse />} />
         <Route path="/pro" element={<ProCourse />} />
@@ -48,11 +73,10 @@ const AppContent=()=>{
         <Route path="/spain" element={<SpainCourse />} />
         <Route path="/french" element={<FrenchCourse />} />
         <Route path="/ukrainian" element={<UkrainianCourse />} />
-        <Route path="/loginpage" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
