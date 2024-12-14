@@ -13,7 +13,9 @@ const Main = ()=>{
                         <h1 className="tittle">Learn foreign languages with us</h1>
                         <p className="intro">Set achievable goals. Get advice from native speakers. Achieve more. Learn a foreign language and discover a world of new opportunities!</p>
                         <div className="actions">
+                        <Link to="/signup">
                             <button className="action-btn">Join us</button>
+                        </Link>
                         </div>
                     </div>
                 </div>
