@@ -1,56 +1,54 @@
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "../features/userSlice";
-import "./styles/Profile.css";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser, login } from '../features/userSlice';
+import { fetchUserData } from '../services/userServices';
+import { logout } from "../features/userSlice";
+import { useNavigate } from "react-router-dom";
+import './styles/Profile.css'
 
 const Profile = () => {
-    const user = useSelector(selectUser);
-    const [userData, setUserData] = useState(null);
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser); // Данные пользователя из Redux
+  const token = localStorage.getItem('token'); // Токен из локального хранилища
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/");
+  }; 
 
-    useEffect(() => {
-        const fetchUserData = async () => {
-            try {
-                const token = localStorage.getItem("token");
-                console.log("Token:", token);
-                console.log("User ID:", user?.id);
-    
-                const response = await fetch(`/api/user/${user?.id}`, {
-                    headers: { Authorization: `Bearer ${token}` },
-                });
-    
-                console.log("Response:", response);
-    
-                if (response.ok) {
-                    const data = await response.json();
-                    console.log("User Data:", data);
-                    setUserData(data);
-                } else {
-                    console.error("Failed to fetch user data. Status:", response.status);
-                }
-            } catch (error) {
-                console.error("Error fetching user data:", error);
-            }
-        };
-    
-        if (user?.id) {
-            fetchUserData();
+  useEffect(() => {
+    const loadUserData = async () => {
+      if (!user && token) {
+        try {
+          const userId = localStorage.getItem('userId');
+          const userData = await fetchUserData(userId, token);
+
+          dispatch(login(userData));
+        } catch (error) {
+          console.error('Error loading user data:', error);
         }
-    }, [user]);
-    
+      }
+    };
 
-    if (!userData) {
-        return <p>Loading...</p>;
-    }
+    loadUserData();
+  }, [user, token, dispatch]);
 
-    return (
-        <div className="profile">
-            <h1>Welcome to your profile!</h1>
-            <div className="profile__details">
-                <p><strong>Name:</strong> {userData.name}</p>
-                <p><strong>Email:</strong> {userData.email}</p>
-            </div>
-        </div>
-    );
+  if (!user) {
+    return <p>Loading profile...</p>;
+  }
+
+  return (
+    <div className="profile">
+    <h1>Welcome, {user.name}</h1>
+    <div className="profile__info">
+      <p><span>Email:</span> {user.email}</p>
+    </div>
+    <div className='course__info'>
+        <h3>Your Courses</h3>
+    </div>
+    <button className="profile__button" onClick={handleLogout}>Logout</button>
+  </div>
+  );
 };
 
 export default Profile;

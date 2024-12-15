@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux"; // Исправлено: импорт dispatch
+import { Link } from 'react-router-dom'
+import { signUp } from "../features/userSlice"; // Импорт действия signUp из userSlice
 import "./styles/SignUp.css";
 
 const SignUp = () => {
@@ -7,12 +10,11 @@ const SignUp = () => {
     name: "",
     email: "",
     password: "",
-    number: "",
-    address: "",
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch(); // Исправлено: использование dispatch
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,9 +35,6 @@ const SignUp = () => {
     } else if (formData.password.length < 6) {
       newErrors.password = "Password must be at least 6 characters.";
     }
-    if (!formData.number.trim()) newErrors.number = "Phone number is required.";
-    if (!formData.address.trim()) newErrors.address = "Address is required.";
-
     return newErrors;
   };
 
@@ -61,8 +60,9 @@ const SignUp = () => {
       });
 
       const data = await response.json();
+
       if (response.ok) {
-        alert("Registration successful!");
+        dispatch(signUp(data.user)); 
         navigate("/profile", { state: { user: data.user } }); // Переход на страницу профиля
       } else {
         alert(data.message || "An error occurred during registration.");
@@ -99,24 +99,6 @@ const SignUp = () => {
         {errors.email && <span className="error">{errors.email}</span>}
 
         <input
-          type="text"
-          name="number"
-          placeholder="Phone Number"
-          value={formData.number}
-          onChange={handleChange}
-        />
-        {errors.number && <span className="error">{errors.number}</span>}
-
-        <input
-          type="text"
-          name="address"
-          placeholder="Address"
-          value={formData.address}
-          onChange={handleChange}
-        />
-        {errors.address && <span className="error">{errors.address}</span>}
-
-        <input
           type="password"
           name="password"
           placeholder="Password"
@@ -129,6 +111,11 @@ const SignUp = () => {
           {isSubmitting ? "Submitting..." : "Sign Up"}
         </button>
       </form>
+      <div className="div-form">
+                <Link to="/">
+                    <button className="back__btn">Back</button>
+                </Link>
+                </div>
     </div>
   );
 };

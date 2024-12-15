@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { login } from "../features/userSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"; // Импортируем useNavigate
+import { Link } from 'react-router-dom'
 import './styles/LoginPage.css';
 
 const LoginPage = () => {
@@ -25,7 +26,6 @@ const LoginPage = () => {
       
           const data = await response.json();
           if (response.ok) {
-            alert("Successful login!");
             localStorage.setItem("token", data.token);
             dispatch(login({ id: data.user.id, name: data.user.name, email: data.user.email, loggedIn: true }));
             navigate("/profile"); // Переход на страницу профиля
@@ -55,6 +55,11 @@ const LoginPage = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button className="submit__btn" type="submit">Log in</button>
+                <div className="div-form">
+                <Link to="/">
+                    <button className="back__btn">Back</button>
+                </Link>
+                </div>
             </form>
         </div>
     );

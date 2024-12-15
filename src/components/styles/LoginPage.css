@@ -38,8 +38,24 @@
     .submit__btn { 
     padding: 17px 30px; 
     margin-top: 10px; 
-    background-color: black; 
+    background-color: #3498db; 
     border: none;color: rgb(239, 239, 239); 
     font-size: 14px; 
     border-radius: 3px; 
+    }
+
+    .div-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .back__btn{
+        padding: 17px 30px; 
+        margin-top: 10px; 
+        background-color: transparent; 
+        border: none;color: rgb(0, 0, 0); 
+        font-size: 14px; 
+        border-radius: 3px; 
+        width: 180px;
     }
