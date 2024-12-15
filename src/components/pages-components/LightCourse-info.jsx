@@ -1,8 +1,23 @@
 import React from "react";
 import Footer from "../Footer";
+import { useNavigate } from "react-router-dom";
 import './styles-components/LightCourse.css'
 
-const LightCourseInfo=()=>{
+const LightCourseInfo = () => {
+        const navigate = useNavigate();
+    
+        const handleBuyClick = () => {
+            const token = localStorage.getItem("token"); // Проверяем, есть ли токен
+    
+            if (!token) {
+                alert("You need to register or log in first!");
+                navigate("/signup"); // Перенаправляем на страницу регистрации
+            } else {
+                // Логика покупки, если пользователь авторизован
+                alert("Thank you for your purchase!");
+                // Здесь можно отправить запрос на сервер
+            }
+        };
     return(
 <div className="main-selector">
     <div className="light-selector">

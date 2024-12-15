@@ -9,7 +9,7 @@ const AboutInfo =()=>{
   <div className="about-main">
     <div className="about-top-main">
       <img
-        class="about-page"
+        className="about-page"
         src="https://blog.study-america.org/wp-content/uploads/2023/05/iap-pics_05.jpg"
         alt="about-page"
       />

@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import {login} from "../features/userSlice"
-import {useDispatch} from "react-redux"
-import './styles/LoginPage.css'
+import { login } from "../features/userSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom"; // Импортируем useNavigate
+import './styles/LoginPage.css';
 
 const LoginPage = () => {
-    const [name, setName] = useState("");    
     const [email, setEmail] = useState("");    
     const [password, setPassword] = useState("");    
 
     const dispatch = useDispatch();
+    const navigate = useNavigate(); // Инициализируем useNavigate
+
     const handleSubmit = async (e) => {
         e.preventDefault();
       
@@ -25,27 +27,21 @@ const LoginPage = () => {
           if (response.ok) {
             alert("Successful login!");
             localStorage.setItem("token", data.token);
-            dispatch(login({ name: data.user.name, email: data.user.email, loggedIn: true }));
+            dispatch(login({ id: data.user.id, name: data.user.name, email: data.user.email, loggedIn: true }));
+            navigate("/profile"); // Переход на страницу профиля
           } else {
             alert(data.message);
           }
         } catch (error) {
           console.error("Error:", error);
         }
-      };
-      
+    };
 
     return (
         <div className="login">
-            <form className="login__form" onSubmit={(e) => handleSubmit(e)}>
+            <form className="login__form" onSubmit={handleSubmit}>
                 <h1>Login here</h1>
 
-                <input 
-                    type="text" 
-                    placeholder="Name" 
-                    value={name} 
-                    onChange={(e) => setName(e.target.value)} 
-                /> 
                 <input 
                     type="email" 
                     placeholder="Email" 
@@ -63,4 +59,5 @@ const LoginPage = () => {
         </div>
     );
 };
-export default LoginPage
+
+export default LoginPage;

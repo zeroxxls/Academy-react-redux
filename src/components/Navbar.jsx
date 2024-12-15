@@ -29,14 +29,6 @@ const Navbar =()=>{
                 </div>
             </div>
             <div className='nav-side'>
-             <section className="section-search">
-                <form className="search-form">
-                    <div className="form-control">
-                        <input type="text" id="name" placeholder="Search..."/>
-                        <button className="search-btn">Search</button>
-                    </div>
-                </form>
-             </section>
             </div>
             <div className='login-side'>
                 <section className='section-login'>

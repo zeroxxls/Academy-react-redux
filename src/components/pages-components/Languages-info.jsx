@@ -51,7 +51,7 @@ const LanguagesInfo=()=>{
                 <div className="intro-page-right">
                         <img src="https://www.deutschland.de/sites/default/files/media/image/T%C3%BCD_Politisches_Zentrum-Berlin_Reichstagsgeb%C3%A4ude.jpg" alt="intro-german"/>
                     </div>
-                    <div class="language-info-card" data-lang="German">
+                    <div className="language-info-card" data-lang="German">
                         <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="German"/>
                         <div className="language-card-content">
                             <h2>German</h2>

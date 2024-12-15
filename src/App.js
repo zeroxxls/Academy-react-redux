@@ -18,6 +18,7 @@ import SpainCourse from './pages/SpainCourse';
 import FrenchCourse from './pages/FrenchCourse';
 import UkrainianCourse from './pages/UkrainianCourse';
 //components
+import Profile from './components/Profile';
 import Navbar from './components/Navbar';
 import LoginPage from './components/LoginPage';
 import LogoutPage from './components/LogoutPage';
@@ -37,7 +38,7 @@ const AppContent = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
-  const pathsWithoutNavbar = ["/loginpage", "/signup", "/logoutpage"];
+  const pathsWithoutNavbar = ["/loginpage", "/signup", "/logoutpage", "/profile"];
 
   // Проверка токена при первой загрузке приложения
   useEffect(() => {
@@ -52,30 +53,29 @@ const AppContent = () => {
     }
   }, [dispatch]);
 
-  // Перенаправление после логина
+  // Перенаправление на логин, если пользователь не авторизован
   useEffect(() => {
-    if (user && location.pathname !== "/logoutpage") {
-      navigate("/logoutpage");
+    if (!user?.loggedIn && location.pathname === "/profile") {
+      navigate("/loginpage");
     }
   }, [user, location.pathname, navigate]);
 
   return (
     <>
-      {/* Условное отображение Navbar */}
       {!pathsWithoutNavbar.includes(location.pathname) && <Navbar />}
 
       <Routes>
-        {/* Условные маршруты для логина и логаута */}
         {!user?.loggedIn ? (
           <>
             <Route path="/loginpage" element={<LoginPage />} />
             <Route path="/signup" element={<SignUp />} />
           </>
         ) : (
-          <Route path="/logoutpage" element={<LogoutPage />} />
+          <>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/logoutpage" element={<LogoutPage />} />
+          </>
         )}
-
-        {/* Общедоступные маршруты */}
         <Route path="/" element={<Home />} />
         <Route path="/languages" element={<Languages />} />
         <Route path="/courses" element={<Courses />} />
@@ -89,9 +89,10 @@ const AppContent = () => {
         <Route path="/french" element={<FrenchCourse />} />
         <Route path="/ukrainian" element={<UkrainianCourse />} />
         <Route path="*" element={<Error />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );
 };
 
-export default App;
+export default App

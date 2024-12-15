@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import "./styles/SignUp.css";
 
 const SignUp = () => {
@@ -12,6 +12,7 @@ const SignUp = () => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -62,7 +63,7 @@ const SignUp = () => {
       const data = await response.json();
       if (response.ok) {
         alert("Registration successful!");
-        setFormData({ name: "", email: "", password: "", number: "", address: "" });
+        navigate("/profile", { state: { user: data.user } }); // Переход на страницу профиля
       } else {
         alert(data.message || "An error occurred during registration.");
       }
