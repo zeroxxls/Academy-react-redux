@@ -40,7 +40,7 @@ const LoginPage = () => {
     return (
         <div className="login">
             <form className="login__form" onSubmit={handleSubmit}>
-                <h1>Login here</h1>
+                <h1>Login</h1>
 
                 <input 
                     type="email" 
