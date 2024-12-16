@@ -1,0 +1,423 @@
+/* Общий стиль страницы курсов */
+.courses-page {
+    padding: 1rem;
+}
+
+/* Заголовок страницы */
+.courses-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Сетка для курсов */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Карточка курса */
+.course-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Изображение курса */
+.course-image {
+    width: 90px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Заголовок курса */
+.course-title {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #007BFF;
+}
+
+/* Описание курса */
+.course-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Кнопка "Enroll" */
+.enroll-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.enroll-button:hover {
+    background-color: #0056b3;
+}
+
+/* Сообщения о загрузке и ошибках */
+.loading-text,
+.error-text {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.error-text {
+    color: red;
+}
+
+.no-courses-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Стиль модального окна */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #007BFF;
+}
+
+.modal-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.modal-content form {
+    margin-top: 1.5rem;
+}
+
+.modal-content input {
+    width: calc(100% - 20px);
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.submit-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+/* Кнопка фильтров */
+.filters-button {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filters-button:hover {
+    background-color: #0056b3;
+}
+
+/* Панель фильтров */
+.filters-panel {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filters-panel h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.apply-filters-button {
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 20px;
+}
+
+.apply-filters-button:hover {
+    background-color: #218838;
+}
+/* Кнопка фильтров с иконкой */
+.filters-icon-button {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filters-icon-button:hover {
+    background-color: #0056b3;
+}
+
+/* Кнопка сброса фильтров */
+.reset-filters-button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #DC3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reset-filters-button:hover {
+    background-color: #C82333;
+}
+
+/* Сетка для курсов, чтобы разместить курс */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Карточка курса */
+.course-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* При наведении на карточку курса */
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Слева отзывается информация о курсе */
+.course-card-left {
+    text-align: center;
+}
+
+/* Изображение курса */
+.course-image {
+    width: 90px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Заголовок курса */
+.course-title {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #007BFF;
+}
+
+/* Описание курса */
+.course-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Кнопка "Enroll" */
+.enroll-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.enroll-button:hover {
+    background-color: #0056b3;
+}
+
+/* Модальное окно */
+/* Модальное окно */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Контент модального окна, с разделением на две части */
+.modal-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex; /* Используем flexbox */
+    width: 80%; /* Ширина модального окна */
+    max-width: 1200px; /* Максимальная ширина */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Контейнер с информацией о курсе */
+.modal-course-info {
+    flex: 1; /* Занимает оставшееся пространство */
+    padding-right: 2rem; /* Отступ от правой стороны для пространства */
+}
+
+/* Контейнер с отзывами */
+.reviews-section {
+    width: 300px; /* Фиксированная ширина для блока с отзывами */
+    max-height: 500px;
+    overflow-y: auto; /* Прокрутка, если отзывы не помещаются */
+    padding-left: 1rem;
+    border-left: 1px solid #ddd; /* Разделитель между блоками */
+}
+
+/* Кнопка закрытия модального окна */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Заголовок курса в модальном окне */
+.modal-course-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #007BFF;
+}
+
+/* Описание курса в модальном окне */
+.modal-course-description {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Отзывы */
+.review-card {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.review-details {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.review-details strong {
+    font-size: 1rem;
+}
+
+.review-details p {
+    margin: 5px 0;
+}

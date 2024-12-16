@@ -76,6 +76,7 @@ const Main = ()=>{
                     </ul>
                     <h3>Do you want know more?</h3>
                  <Link to="/about"><button className="aboutUs-btn">More about us</button></Link>
+                 <Link to="/coursespage"><button>Courses</button></Link>
                     </div>
                         <div className="aboutUs-image">
                         <img src="https://t1.unipage.net/src/wwskas.png" alt="Learning Languages" />

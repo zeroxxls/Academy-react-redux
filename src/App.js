@@ -23,6 +23,7 @@ import Navbar from './components/Navbar';
 import LoginPage from './components/LoginPage';
 import LogoutPage from './components/LogoutPage';
 import SignUp from './components/SignUp';
+import CoursesPage from './components/CoursesPage';
 
 const App = () => {
   return (
@@ -90,6 +91,7 @@ const AppContent = () => {
         <Route path="/ukrainian" element={<UkrainianCourse />} />
         <Route path="*" element={<Error />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path='coursespage' element={<CoursesPage/>}/>
       </Routes>
     </>
   );
