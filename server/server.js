@@ -5,21 +5,30 @@ const cors = require("cors");
 dotenv.config();
 
 const app = express();
+
+// Разрешаем доступ с клиента
 app.use(cors({
-  origin: 'http://localhost:3009', // Указываем, что разрешаем доступ с клиента на этом порту
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Разрешенные HTTP методы
-  allowedHeaders: ['Content-Type', 'Authorization'] // Разрешенные заголовки
+  origin: 'http://localhost:3000', // Указываем разрешенный клиентский адрес
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+// Используем JSON middleware для парсинга тела запроса
 app.use(express.json());
 
+// Подключение к MongoDB
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
-  const User = require('./models/User');
-  const Course = require('./models/Course');
+// Импорт моделей
+const User = require('./models/User');
+const Course = require('./models/Course');
 
-const authMiddleware = require('./middleware/auth'); 
+// Импорт миддлвара для аутентификации
+const authMiddleware = require('./middleware/auth');
+
+// Роуты для пользователей (с использованием аутентификации)
 app.get('/api/users/:id', authMiddleware, async (req, res) => {
   const { id } = req.params;
 
@@ -38,28 +47,32 @@ app.get('/api/users/:id', authMiddleware, async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
+
+// Роуты для курсов
 app.get('/api/courses', async (req, res) => {
   try {
-      const courses = await Course.find();
-      res.json(courses);
+    const courses = await Course.find();
+    res.json(courses);
   } catch (error) {
-      res.status(500).json({ message: 'Ошибка сервера при получении курсов' });
+    res.status(500).json({ message: 'Ошибка сервера при получении курсов' });
   }
 });
 
 app.post('/api/courses', async (req, res) => {
   try {
-      const newCourse = new Course(req.body);
-      await newCourse.save();
-      res.status(201).json(newCourse);
+    const newCourse = new Course(req.body);
+    await newCourse.save();
+    res.status(201).json(newCourse);
   } catch (error) {
-      res.status(500).json({ message: 'Ошибка сервера при добавлении курса' });
+    res.status(500).json({ message: 'Ошибка сервера при добавлении курса' });
   }
 });
 
+// Роуты для аутентификации (например, регистрация, логин)
 const authRoutes = require("./routes/auth");
 app.use("/api", authRoutes);
 
+// Запуск сервера
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 

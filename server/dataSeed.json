@@ -1,0 +1,103 @@
+[
+    {
+        "title": "Python for Data Science",
+        "description": "Explore data analysis with Python",
+        "category": "Data Science",
+        "level": "Intermediate",
+        "image": "/assets/python-logo.png"
+    },
+    {
+        "title": "Introduction to HTML",
+        "description": "Learn to create basic web pages",
+        "category": "Web Development",
+        "level": "Beginner",
+        "image": "/assets/html-logo.png"
+    },
+    {
+        "title": "CSS Styling",
+        "description": "Master the art of web design with CSS",
+        "category": "Web Development",
+        "level": "Intermediate",
+        "image": "/assets/css-logo.png"
+    },
+    {
+        "title": "React Basics",
+        "description": "Build dynamic web apps with React",
+        "category": "Programming",
+        "level": "Intermediate",
+        "image": "/assets/react-logo.png"
+    },
+    {
+        "title": "Node.js Essentials",
+        "description": "Learn backend development with Node.js",
+        "category": "Programming",
+        "level": "Intermediate",
+        "image": "/assets/nodejs-logo.png"
+    },
+    {
+        "title": "Data Structures",
+        "description": "Master essential data structures",
+        "category": "Programming",
+        "level": "Advanced",
+        "image": "/assets/data-structures.png"
+    },
+    {
+        "title": "Cloud Computing Basics",
+        "description": "Understand the basics of cloud computing",
+        "category": "IT",
+        "level": "Beginner",
+        "image": "/assets/cloud-computing.png"
+    },
+    {
+        "title": "Linux Fundamentals",
+        "description": "Get started with Linux systems",
+        "category": "IT",
+        "level": "Beginner",
+        "image": "/assets/linux-logo.png"
+},
+{
+        "title": "Java Programming",
+        "description": "Learn Java from scratch",
+        "category": "Programming",
+        "level": "Beginner",
+        "image": "/assets/java-logo.png"
+},
+{
+        "title": "C++ for Beginners",
+        "description": "Introduction to C++ programming",
+        "category": "Programming",
+        "level": "Beginner",
+        "image": "/assets/cpp-logo.png"
+},
+{
+        "title": "Cybersecurity Basics",
+        "description": "Learn to protect systems and data",
+        "category": "IT",
+        "level": "Beginner",
+        "image": "/assets/cybersecurity.png"
+},
+{
+        "title": "Android App Development",
+        "description": "Build your first Android app",
+        "category": "Mobile Development",
+        "level": "Intermediate",
+        "image": "/assets/android-logo.png"
+},
+{
+        "title": "iOS App Development",
+        "description": "Start developing iOS apps",
+        "category": "Mobile Development",
+        "level": "Intermediate",
+        "image": "/assets/ios-logo.png"
+},
+{
+        "title": "SQL for Data Analysis",
+        "description": "Analyze data with SQL",
+        "category": "Data Science",
+        "level": "Beginner",
+        "image": "/assets/sql-logo.png"
+}
+
+  ]
+  
+
