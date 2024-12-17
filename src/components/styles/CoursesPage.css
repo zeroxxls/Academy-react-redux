@@ -1,6 +1,11 @@
 /* Общий стиль страницы курсов */
 .courses-page {
     padding: 1rem;
+    margin-top: 100px;
+}
+.courses-page h2{
+    color: black;
+    margin-left: 550px;
 }
 
 /* Заголовок страницы */
@@ -16,6 +21,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 50px;
 }
 
 /* Карточка курса */
@@ -27,6 +33,9 @@
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+.course-card h3{
+    color: #0077cc;
+}
 
 .course-card:hover {
     transform: translateY(-5px);
@@ -35,8 +44,8 @@
 
 /* Изображение курса */
 .course-image {
-    width: 90px;
-    max-height: 150px;
+    width: 100px;
+    max-height: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -56,15 +65,15 @@
     margin-bottom: 1rem;
 }
 
+
 /* Кнопка "Enroll" */
 .enroll-button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
+    padding: 17px 30px; 
+    margin-top: 10px; 
+    background-color: #3498db; 
+    border: none;color: rgb(239, 239, 239); 
+    font-size: 14px; 
+    border-radius: 3px; 
 }
 
 .enroll-button:hover {

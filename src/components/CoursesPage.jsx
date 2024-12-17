@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CoursesCards from './CoursesCards';
+import Footer from './Footer';
 import './styles/CoursesPage.css';
 
 const CoursesPage = () => {
@@ -64,6 +65,7 @@ const CoursesPage = () => {
                     </div>
                 </div>
             )}
+            <Footer/>
         </div>
     );
 };

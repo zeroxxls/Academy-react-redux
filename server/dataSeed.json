@@ -68,36 +68,7 @@
         "category": "Programming",
         "level": "Beginner",
         "image": "/assets/cpp-logo.png"
-},
-{
-        "title": "Cybersecurity Basics",
-        "description": "Learn to protect systems and data",
-        "category": "IT",
-        "level": "Beginner",
-        "image": "/assets/cybersecurity.png"
-},
-{
-        "title": "Android App Development",
-        "description": "Build your first Android app",
-        "category": "Mobile Development",
-        "level": "Intermediate",
-        "image": "/assets/android-logo.png"
-},
-{
-        "title": "iOS App Development",
-        "description": "Start developing iOS apps",
-        "category": "Mobile Development",
-        "level": "Intermediate",
-        "image": "/assets/ios-logo.png"
-},
-{
-        "title": "SQL for Data Analysis",
-        "description": "Analyze data with SQL",
-        "category": "Data Science",
-        "level": "Beginner",
-        "image": "/assets/sql-logo.png"
 }
-
   ]
   
 
