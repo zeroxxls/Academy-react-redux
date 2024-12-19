@@ -1,0 +1,29 @@
+.top-logged-main{
+    display: flex;
+    align-items: center;
+    flex-direction: column ;
+    margin-top: 100px;
+}
+.top-logged-main h2{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+.top-logged-main h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+.active-courses{
+    text-align: center;
+    margin: 10px auto;
+    padding: 30px;
+    max-width: 1000px;
+    background: linear-gradient(135deg, #ffffff, #f3f4f6);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+}

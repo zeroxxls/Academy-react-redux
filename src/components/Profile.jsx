@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser, login } from '../features/userSlice';
 import { fetchUserData } from '../services/userServices';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { logout } from "../features/userSlice";
 import { useNavigate } from "react-router-dom";
 import './styles/Profile.css'
@@ -15,6 +17,9 @@ const Profile = () => {
     dispatch(logout());
     navigate("/");
   }; 
+  const handleNavigateToHome = () => {
+    navigate("/");
+};
 
   useEffect(() => {
     const loadUserData = async () => {
@@ -38,7 +43,9 @@ const Profile = () => {
   }
 
   return (
-    <div className="profile">
+   <div className='profile-page'>
+<FontAwesomeIcon onClick={handleNavigateToHome} icon={faHome} size="2x" />
+       <div className="profile">
     <h1>Welcome, {user.name}</h1>
     <div className="profile__info">
       <p><span>Email:</span> {user.email}</p>
@@ -48,6 +55,7 @@ const Profile = () => {
     </div>
     <button className="profile__button" onClick={handleLogout}>Logout</button>
   </div>
+   </div> 
   );
 };
 

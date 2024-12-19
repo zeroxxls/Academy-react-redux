@@ -24,6 +24,8 @@ import LoginPage from './components/LoginPage';
 import LogoutPage from './components/LogoutPage';
 import SignUp from './components/SignUp';
 import CoursesPage from './components/CoursesPage';
+import LoggedInMain from './components/LoggedInMain';
+import LoggedInNavbar from './components/LoggedInNavbar';
 
 const App = () => {
   return (
@@ -54,7 +56,6 @@ const AppContent = () => {
     }
   }, [dispatch]);
 
-  // Перенаправление на логин, если пользователь не авторизован
   useEffect(() => {
     if (!user?.loggedIn && location.pathname === "/profile") {
       navigate("/loginpage");
@@ -63,7 +64,8 @@ const AppContent = () => {
 
   return (
     <>
-      {!pathsWithoutNavbar.includes(location.pathname) && <Navbar />}
+        {!pathsWithoutNavbar.includes(location.pathname) &&
+        (user?.loggedIn ? <LoggedInNavbar /> : <Navbar />)}
 
       <Routes>
         {!user?.loggedIn ? (
@@ -73,11 +75,12 @@ const AppContent = () => {
           </>
         ) : (
           <>
+            <Route path='/loggedInNavbar' element={LoggedInNavbar}/>
             <Route path="/profile" element={<Profile />} />
             <Route path="/logoutpage" element={<LogoutPage />} />
           </>
         )}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={user?.loggedIn ? <LoggedInMain /> : <Home />} />
         <Route path="/languages" element={<Languages />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/about" element={<About />} />

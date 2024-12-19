@@ -1,15 +1,19 @@
 .profile {
   text-align: center;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 30px;
-  max-width: 600px;
+  max-width: 1000px;
   background: linear-gradient(135deg, #ffffff, #f3f4f6);
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   font-family: 'Roboto', Arial, sans-serif;
   color: #333;
 }
-
+.profile-page svg{
+  color: black;
+  margin-left: 20px;
+  margin-top: 20px;
+}
 .profile h1 {
   font-size: 2.2rem;
   font-weight: bold;

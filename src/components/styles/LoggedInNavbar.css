@@ -1,0 +1,31 @@
+.profile-side{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 4px;
+}
+.section-profile{
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+.profile-form{
+    display: flex;
+    align-items: center;
+}
+.form-profile-control {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 24px; /* Увеличьте размер шрифта */
+    color: #000; /* Убедитесь, что цвет не совпадает с фоном */
+
+}
+.form-profile-control svg {
+    width: 24px; /* Задайте ширину */
+    height: 24px; /* Задайте высоту */
+    cursor: pointer;
+    margin-top: 3px;
+    margin-left: 30px;
+}
