@@ -1,8 +1,11 @@
 [
     {
-        "title": "Python for Data Science",
+        "title": "English",
         "description": "Explore data analysis with Python",
-        "category": "Data Science",
+        "program_1":"Preparation for International Exams (IELTS, TOEFL, Cambridge Exams). Participants will follow a step-by-step preparation plan, including a detailed breakdown of exam formats, practice for all language skills (Listening, Reading, Writing, Speaking), and regular mock tests. Special attention is given to grammar, vocabulary, and strategies for completing tasks efficiently.",
+        "program_2":"Language Club and Conversational Practice. Improve your speaking skills by engaging in small group discussions with native speakers or certified instructors. Topics range from movie and book discussions to debates on trending issues, helping you build confidence in real-life communication.",
+        "program_3":"Professional Lectures and Workshops. The course offers lectures on professional topics, such as business English, crafting resumes, and preparing for job interviews. Workshops by experts will help you master English for specific fields like IT, healthcare, or marketing.",
+        "category": "Course",
         "level": "Intermediate",
         "image": "/assets/python-logo.png"
     },

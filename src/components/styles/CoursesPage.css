@@ -133,18 +133,6 @@
     color: #333;
 }
 
-.modal-content h3 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #007BFF;
-}
-
-.modal-content p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    color: #555;
-}
-
 .modal-content form {
     margin-top: 1.5rem;
 }
@@ -337,8 +325,6 @@
     background-color: #0056b3;
 }
 
-/* Модальное окно */
-/* Модальное окно */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -352,7 +338,6 @@
     z-index: 1000;
 }
 
-/* Контент модального окна, с разделением на две части */
 .modal-content {
     background: #fff;
     border-radius: 8px;
@@ -364,22 +349,11 @@
     position: relative;
 }
 
-/* Контейнер с информацией о курсе */
 .modal-course-info {
-    flex: 1; /* Занимает оставшееся пространство */
-    padding-right: 2rem; /* Отступ от правой стороны для пространства */
+    flex: 1; 
+    padding-right: 2rem; 
 }
 
-/* Контейнер с отзывами */
-.reviews-section {
-    width: 300px; /* Фиксированная ширина для блока с отзывами */
-    max-height: 500px;
-    overflow-y: auto; /* Прокрутка, если отзывы не помещаются */
-    padding-left: 1rem;
-    border-left: 1px solid #ddd; /* Разделитель между блоками */
-}
-
-/* Кнопка закрытия модального окна */
 .modal-close {
     position: absolute;
     top: 10px;
@@ -391,42 +365,64 @@
     color: #333;
 }
 
-/* Заголовок курса в модальном окне */
 .modal-course-title {
     margin-bottom: 1rem;
     font-size: 1.5rem;
     color: #007BFF;
 }
 
-/* Описание курса в модальном окне */
 .modal-course-description {
     margin: 0.5rem 0;
     font-size: 0.9rem;
     color: #555;
 }
 
-/* Отзывы */
-.review-card {
-    display: flex;
-    margin-bottom: 1rem;
+.modal-submit__btn{
+    padding: 17px 30px; 
+    margin-top: 10px; 
+    background-color: #3498db; 
+    border: none;color: rgb(239, 239, 239); 
+    font-size: 14px; 
+    border-radius: 3px; 
+    width: calc(100% - 20px);;
 }
 
-.review-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+.modal-footer{
+    margin-left: 20px;
 }
-
-.review-details {
-    font-size: 0.9rem;
-    color: #555;
+.modal-header{
+    margin-right: 20px;
 }
-
-.review-details strong {
+.modal-info ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.modal-info ul li{
+    margin-top: 5px;
     font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.modal-info ul li::before{
+    content: "•";
+    margin-right: 10px;
+    color: #000000; 
+    font-size: 1.5rem;
+}
+.modal-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #007BFF;
 }
 
-.review-details p {
-    margin: 5px 0;
+.modal-content p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
 }

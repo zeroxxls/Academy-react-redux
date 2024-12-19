@@ -5,6 +5,7 @@ const User = require("../models/User");
 
 const router = express.Router();
 
+// Регистрация пользователя
 router.post("/signup", async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email || !password) {
@@ -28,6 +29,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+// Авторизация пользователя
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -48,5 +50,31 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ message: "Server error", error });
   }
 });
+
+// routes/auth.js
+router.post("/register-course", async (req, res) => {
+  const { courseId, userId } = req.body;
+
+  try {
+      const user = await User.findById(userId);
+      if (!user) {
+          return res.status(404).json({ message: "User not found" });
+      }
+
+      if (!user.courses.includes(courseId)) {
+          user.courses.push(courseId); 
+      } else {
+          return res.status(400).json({ message: "User is already registered for this course" });
+      }
+
+      await user.save();
+
+      res.status(200).json({ message: "Course registered successfully" });
+  } catch (error) {
+      console.error("Error registering course:", error);
+      res.status(500).json({ message: "Server error" });
+  }
+});
+
 
 module.exports = router;
