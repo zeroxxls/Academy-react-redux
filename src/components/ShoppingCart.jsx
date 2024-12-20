@@ -16,7 +16,6 @@ const ShoppingCart = () => {
   const handleBuyCourse = (course) => {
     dispatch(addCourseToProfile(course)); // Добавляем курс в профиль
     dispatch(removeFromCart(course._id));
-    alert(`You bought the course: ${course.title}`);
   };
 
   return (
@@ -25,6 +24,12 @@ const ShoppingCart = () => {
       <ul>
         {cartItems.map((item) => (
           <li key={item._id} className="cart-item">
+            {/* Картинка курса */}
+            <img 
+              className="course-image" 
+              src={item.image} // Используем item вместо course
+              alt={item.title} 
+            />
             <h3>{item.title}</h3>
             <p>Category: {item.category}</p>
             <p>Level: {item.level}</p>

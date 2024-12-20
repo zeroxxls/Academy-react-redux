@@ -33,7 +33,6 @@ const CoursesPage = () => {
 
   const handleAddToCart = (course) => {
     dispatch(addToCart(course)); // Добавляем в корзину
-    alert(`${course.title} added to cart!`);
     setSelectedCourse(null); // Закрываем модальное окно
   };
 

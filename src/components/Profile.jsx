@@ -46,24 +46,35 @@ const Profile = () => {
   }
 
   return (
-    <div className="profile-page">
-      <FontAwesomeIcon onClick={handleNavigateToHome} icon={faHome} size="2x" />
-      <div className="profile">
+    <div className="user-profile-page">
+      <FontAwesomeIcon
+        onClick={handleNavigateToHome}
+        icon={faHome}
+        size="2x"
+        className="user-profile-home-icon"
+      />
+      <div className="user-profile">
         <h1>Welcome, {user.name}</h1>
-        <div className="profile__info">
+        <div className="user-profile-info">
           <p>
             <span>Email:</span> {user.email}
           </p>
         </div>
-        <div className="course__info">
+        <div className="user-courses-section">
           <h3>Your Courses</h3>
           {userCourses.length > 0 ? (
-            <ul>
+            <ul className="user-courses-list">
               {userCourses.map((course, index) => (
-                <li key={index}>
-                  <h4>{course.title}</h4>
-                  <p>Category: {course.category}</p>
-                  <p>Level: {course.level}</p>
+                <li key={index} className="user-course-item">
+                  <img
+                    className="course-image"
+                    src={course.image}
+                    alt={course.title}
+                  />
+                  <h4 className="user-course-title">{course.title}</h4>
+                  <p className="user-course-description">{course.description}</p>
+                  <p className="user-course-meta">Category: {course.category}</p>
+                  <p className="user-course-meta">Level: {course.level}</p>
                 </li>
               ))}
             </ul>
@@ -71,7 +82,7 @@ const Profile = () => {
             <p>You haven't bought any courses yet.</p>
           )}
         </div>
-        <button className="profile__button" onClick={handleLogout}>
+        <button className="user-profile-logout-btn" onClick={handleLogout}>
           Logout
         </button>
       </div>

@@ -393,12 +393,12 @@
 .modal-header{
     margin-right: 20px;
 }
-.modal-info ul{
+.modal-body ul{
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.modal-info ul li{
+.modal-body ul li{
     margin-top: 5px;
     font-size: 1rem;
     color: #555;
@@ -406,7 +406,7 @@
     display: flex;
     align-items: center;
 }
-.modal-info ul li::before{
+.modal-body ul li::before{
     content: "•";
     margin-right: 10px;
     color: #000000; 
