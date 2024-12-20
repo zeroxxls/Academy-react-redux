@@ -2,12 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-left: 4px;
+    margin-right: 100px;
 }
 .section-profile{
     display: flex;
     align-items: center;
-    margin-right: 100px;
+    margin-right: 70px;
 }
 .profile-form{
     display: flex;
@@ -26,6 +26,6 @@
     width: 24px; /* Задайте ширину */
     height: 24px; /* Задайте высоту */
     cursor: pointer;
-    margin-top: 3px;
+    margin-top: 5px;
     margin-left: 30px;
 }

@@ -76,5 +76,48 @@ router.post("/register-course", async (req, res) => {
   }
 });
 
+const Purchase = require("../models/Purchase");
+router.post("/purchase-course", async (req, res) => {
+  const { courseId, userId } = req.body;
+
+  if (!courseId || !userId) {
+    return res.status(400).json({ message: "Course ID and User ID are required" });
+  }
+
+  try {
+    // Проверяем существование пользователя
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Проверяем существование курса
+    const course = await Course.findById(courseId);
+    if (!course) {
+      return res.status(404).json({ message: "Course not found" });
+    }
+
+    // Проверяем, не была ли уже совершена покупка
+    const existingPurchase = await Purchase.findOne({ user: userId, course: courseId });
+    if (existingPurchase) {
+      return res.status(400).json({ message: "You already purchased this course" });
+    }
+
+    // Создаем новую запись о покупке
+    const newPurchase = new Purchase({
+      user: userId,
+      course: courseId,
+    });
+
+    await newPurchase.save();
+
+    res.status(201).json({ message: "Purchase recorded successfully", purchase: newPurchase });
+  } catch (error) {
+    console.error("Error processing purchase:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+
 
 module.exports = router;

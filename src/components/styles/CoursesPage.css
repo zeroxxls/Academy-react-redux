@@ -378,13 +378,13 @@
 }
 
 .modal-submit__btn{
-    padding: 17px 30px; 
-    margin-top: 10px; 
     background-color: #3498db; 
     border: none;color: rgb(239, 239, 239); 
     font-size: 14px; 
+    cursor: pointer;
     border-radius: 3px; 
-    width: calc(100% - 20px);;
+    width: 120px;
+    height: 60px;
 }
 
 .modal-footer{

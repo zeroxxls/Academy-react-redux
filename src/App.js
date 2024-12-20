@@ -26,6 +26,7 @@ import SignUp from './components/SignUp';
 import CoursesPage from './components/CoursesPage';
 import LoggedInMain from './components/LoggedInMain';
 import LoggedInNavbar from './components/LoggedInNavbar';
+import ShoppingCart from './components/ShoppingCart';
 
 const App = () => {
   return (
@@ -75,7 +76,8 @@ const AppContent = () => {
           </>
         ) : (
           <>
-            <Route path='/loggedInNavbar' element={LoggedInNavbar}/>
+            <Route path='/loggedInNavbar' element={<LoggedInNavbar/>}/>
+            <Route path='/cart' element={<ShoppingCart/>}/>
             <Route path="/profile" element={<Profile />} />
             <Route path="/logoutpage" element={<LogoutPage />} />
           </>
