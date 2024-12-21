@@ -11,9 +11,14 @@ const profileSlice = createSlice({
     addCourseToProfile: (state, action) => {
       state.userCourses.push(action.payload); // Добавляем курс в список
     },
+    removeFromProfile: (state, action) => {
+      state.userCourses = state.userCourses.filter(
+        (item) => item._id !== action.payload
+      ); // Удаляем курс по ID
+    },
   },
 });
 
-export const { addCourseToProfile } = profileSlice.actions;
+export const { addCourseToProfile, removeFromProfile } = profileSlice.actions;
 
 export default profileSlice.reducer;

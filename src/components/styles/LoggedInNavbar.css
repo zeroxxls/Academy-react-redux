@@ -29,3 +29,32 @@
     margin-top: 5px;
     margin-left: 30px;
 }
+.nav-page__profile-icon {
+    color: #000; 
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-page__profile-icon:hover {
+    transform: scale(1.1); 
+    color: #555;
+  }
+.nav-page__signOut-icon{
+    color: #000; 
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}  
+.nav-page__signOut-icon:hover{
+    transform: scale(1.1);
+    color: #555; 
+}
+.nav-page__cart-icon{
+    color: #000; 
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.nav-page__cart-icon:hover{
+    transform: scale(1.1);
+    color: #555; 
+}

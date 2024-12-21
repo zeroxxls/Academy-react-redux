@@ -4,6 +4,7 @@ import CoursesCards from './CoursesCards';
 import Footer from './Footer';
 import './styles/CoursesPage.css';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 // import { useNavigate } from 'react-router-dom'; 
 // import {useSelector} from 'react-redux';
 import { addToCart } from '../features/cartSlice';
@@ -12,6 +13,7 @@ const CoursesPage = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCourse, setSelectedCourse] = useState(null); // Для модального окна
+  const cart = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   // const navigate = useNavigate();
   // const isAuthenticated = useSelector((state) => state.user.isAuthenticated); 
@@ -41,6 +43,13 @@ const CoursesPage = () => {
     //   return; // Останавливаем выполнение функции, если пользователь не авторизован
     // }
     // // Если пользователь авторизован, добавляем курс в корзину
+    const isCourseInCart = cart.some((item) => item.title === course.title);
+
+    if (isCourseInCart) {
+      alert(`You already have a course in the "${course.title}" category.`);
+      return;
+    } 
+    
     dispatch(addToCart(course)); 
     setSelectedCourse(null); // Закрываем модальное окно
   };
