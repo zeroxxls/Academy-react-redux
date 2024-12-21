@@ -29,7 +29,7 @@ const EnglishCourseInfo=()=>{
                 <li>Those looking to enhance their skills for career or academic purposes.</li>
                 <li>Learners aiming to speak like native speakers.</li>
             </ul>
-            <Link to="/courses">
+            <Link to="/coursespage">
                  <button className="choose-course-button">Choose Course</button>
             </Link>
         </div>

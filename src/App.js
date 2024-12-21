@@ -6,12 +6,8 @@ import { selectUser } from './features/userSlice';
 //pages
 import Home from './pages/Home';
 import Languages from './pages/Languages';
-import Courses from './pages/Courses';
 import Error from './pages/Error';
 import About from './pages/About';
-import LightCourse from './pages/LightCourse';
-import IntensiveCourse from './pages/IntensiveCourse';
-import ProCourse from './pages/ProCourse';
 import EnglishCourse from './pages/EnglishCourse';
 import GermanCourse from './pages/GermanCourse';
 import SpainCourse from './pages/SpainCourse';
@@ -84,11 +80,7 @@ const AppContent = () => {
         )}
         <Route path="/" element={user?.loggedIn ? <LoggedInMain /> : <Home />} />
         <Route path="/languages" element={<Languages />} />
-        <Route path="/courses" element={<Courses />} />
         <Route path="/about" element={<About />} />
-        <Route path="/light" element={<LightCourse />} />
-        <Route path="/intensive" element={<IntensiveCourse />} />
-        <Route path="/pro" element={<ProCourse />} />
         <Route path="/english" element={<EnglishCourse />} />
         <Route path="/german" element={<GermanCourse />} />
         <Route path="/spain" element={<SpainCourse />} />

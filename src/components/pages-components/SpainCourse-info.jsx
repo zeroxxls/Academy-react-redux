@@ -31,7 +31,7 @@ const SpainCourseInfo=()=>{
             <li>Travelers to Spain and Latin America.</li>
             <li>Professionals working with Spanish-speaking clients.</li>
         </ul>
-            <Link to="/courses">
+            <Link to="/coursespage">
                  <button className="choose-course-button">Choose Course</button>
             </Link>
         </div>

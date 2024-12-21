@@ -1,29 +1,91 @@
-.top-logged-main{
+.top-logged-main {
     display: flex;
     align-items: center;
-    flex-direction: column ;
-    margin-top: 100px;
+    flex-direction: column;
+    margin-top: 120px; /* Отступ для хедера */
+    padding: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f9f9f9;
 }
-.top-logged-main h2{
-    font-size: 2.2rem;
+
+.top-logged-main h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.top-logged-main h3 {
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #2c3e50;
-}
-.top-logged-main h3{
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2c3e50;
-}
-.active-courses{
+    color: #555;
     text-align: center;
-    margin: 10px auto;
-    padding: 30px;
-    max-width: 1000px;
-    background: linear-gradient(135deg, #ffffff, #f3f4f6);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    font-family: 'Roboto', Arial, sans-serif;
-    color: #333;
+}
+
+.active-courses {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.active-courses ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.course-item:last-child {
+    border-bottom: none;
+}
+
+.course-image {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.course-item-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-item-content h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0077cc;
+    margin: 0 0 10px;
+}
+
+.course-item p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    color: #555;
+    align-items: left;
+}
+
+.course-item p strong {
+    color: #000000;
+}
+
+.no-courses-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    padding: 20px;
 }

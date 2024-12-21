@@ -31,7 +31,7 @@ const FrenchCourseInfo=()=>{
                 <li>Travelers to France, Canada, and African countries.</li>
                 <li>Professionals working in global companies.</li>
             </ul>
-                <Link to="/courses">
+                <Link to="/coursespage">
                      <button className="choose-course-button">Choose Course</button>
                 </Link>
             </div>

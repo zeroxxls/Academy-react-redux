@@ -30,7 +30,7 @@ const GermanCourseInfo=()=>{
             <li>Those planning to study, work, or live in Germany.</li>
             <li>Professionals connecting with German companies.</li>
         </ul>
-        <Link to="/courses">
+        <Link to="/coursespage">
             <button className="choose-course-button">Choose Course</button>
         </Link>
     </div>

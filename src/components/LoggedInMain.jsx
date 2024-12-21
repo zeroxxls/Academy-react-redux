@@ -92,6 +92,41 @@ const LoggedInMain = () => {
           </div>
         </div>
       </div>
+      <div className="language-selector">
+                <h1>Explore more Information about our most Popular Courses</h1>
+             <div className="languages">
+                <Link to="/english">
+                <div className="language-card" data-lang="English">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English"/>
+                    <p>English</p>
+                </div>
+                </Link>
+                <Link to="/german">
+                <div className="language-card" data-lang="German">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="German"/>
+                    <p>German</p>
+                </div>
+                </Link>
+                <Link to="/spain">
+                <div className="language-card" data-lang="Spanish">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Spanish"/>
+                    <p>Spanish</p>
+                </div>
+                </Link>
+                <Link to="/french">
+                <div className="language-card" data-lang="French">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="French"/>
+                    <p>French</p>
+                </div>
+                </Link>
+                <Link to="ukrainian">
+                <div className="language-card" data-lang="Ukrainian">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukrainian"/>
+                    <p>Ukrainian</p>
+                </div>
+                </Link>
+              </div>
+            </div>
       <Footer />
     </main>
   );

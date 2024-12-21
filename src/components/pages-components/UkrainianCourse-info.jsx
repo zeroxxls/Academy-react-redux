@@ -31,7 +31,7 @@ const UkrainianCourseInfo=()=>{
             <li>Travelers and expatriates living in Ukraine.</li>
             <li>Heritage learners reconnecting with their roots.</li>
             </ul>
-                <Link to="/courses">
+                <Link to="/coursespage">
                      <button className="choose-course-button">Choose Course</button>
                 </Link>
             </div>
