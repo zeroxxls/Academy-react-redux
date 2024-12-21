@@ -20,25 +20,31 @@ const ShoppingCart = () => {
 
   return (
     <div className="shopping-cart">
-      <h2>Shopping Cart</h2>
-      <ul>
-        {cartItems.map((item) => (
-          <li key={item._id} className="cart-item">
-            {/* Картинка курса */}
-            <img 
-              className="course-image" 
-              src={item.image} // Используем item вместо course
-              alt={item.title} 
-            />
+  <h2>Shopping Cart</h2>
+  <ul>
+    {cartItems && cartItems.length > 0 ? (
+      cartItems.map((item) => (
+        <li key={item._id} className="cart-item">
+          <img
+            className="course-image"
+            src={item.image}
+            alt={item.title}
+          />
+          <div className="cart-item-content">
             <h3>{item.title}</h3>
-            <p>Category: {item.category}</p>
-            <p>Level: {item.level}</p>
-            <p>Cost: {item.cost}</p>
-            <button onClick={() => handleBuyCourse(item)}>Buy</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+            <p><strong>Category:</strong> {item.category}</p>
+            <p><strong>Level:</strong> {item.level}</p>
+            <p><strong>Cost:</strong> {item.cost}</p>
+          </div>
+          <button onClick={() => handleBuyCourse(item)}>Buy</button>
+        </li>
+      ))
+    ) : (
+      <p className="no-cart-items-message">Your cart is empty.</p>
+    )}
+  </ul>
+</div>
+
   );
 };
 

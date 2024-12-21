@@ -13,7 +13,7 @@ const FrenchCourseInfo=()=>{
             />
             <div className="top-french-card-content" data-course="french">
                 <img className="flag-icon" src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="flag" />
-                <h3 className="french-name-course">Spanish</h3>
+                <h3 className="french-name-course">French</h3>
                 <p>
                 French is one of the most beautiful and widely spoken languages, used in over 30 countries. Learning French unlocks opportunities in culture, travel, and international relations.
                 </p>
