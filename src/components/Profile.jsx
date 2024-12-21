@@ -16,6 +16,8 @@ const Profile = () => {
   const userCourses = useSelector((state) => state.profile.userCourses); // Список курсов
 
   const handleLogout = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
     dispatch(logout());
     navigate("/");
   };
