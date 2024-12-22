@@ -68,7 +68,6 @@ app.post('/api/courses', async (req, res) => {
   }
 });
 
-
 // Роуты для аутентификации (например, регистрация, логин)
 const authRoutes = require("./routes/auth");
 app.use("/api", authRoutes);
