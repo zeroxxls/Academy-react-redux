@@ -9,7 +9,7 @@ const ShoppingCart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const profileCourses = useSelector((state) => state.profile.userCourses);
 
-  const totalCost = cartItems.reduce((sum, item) => sum + item.cost, 0); // Общая стоимость
+  const totalCost = cartItems.reduce((sum, item) => sum + Number(item.cost), 0); // Общая стоимость
 
   const handleBuyCourse = (course) => {
     const isCourseInProfile = profileCourses.some((item) => item.title === course.title);
