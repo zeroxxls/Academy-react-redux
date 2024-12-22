@@ -8,9 +8,9 @@ import Footer from "./Footer";
 
 const LoggedInMain = () => {
   const dispatch = useDispatch();
-  const user = useSelector(selectUser); // Данные пользователя из Redux
-  const token = localStorage.getItem("token"); // Токен из локального хранилища
-  const userCourses = useSelector((state) => state.profile.userCourses); // Список курсов
+  const user = useSelector(selectUser); 
+  const token = localStorage.getItem("token"); 
+  const userCourses = useSelector((state) => state.profile.userCourses); 
 
   useEffect(() => {
     const loadUserData = async () => {

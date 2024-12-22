@@ -6,13 +6,13 @@ import { selectUser } from './features/userSlice';
 //pages
 import Home from './pages/Home';
 import Languages from './pages/Languages';
-import Error from './pages/Error';
 import About from './pages/About';
 import EnglishCourse from './pages/EnglishCourse';
 import GermanCourse from './pages/GermanCourse';
 import SpainCourse from './pages/SpainCourse';
 import FrenchCourse from './pages/FrenchCourse';
 import UkrainianCourse from './pages/UkrainianCourse';
+import Loading from './components/Loading';
 //components
 import Profile from './components/Profile';
 import Navbar from './components/Navbar';
@@ -40,7 +40,7 @@ const AppContent = () => {
 
   const pathsWithoutNavbar = ["/loginpage", "/signup", "/logoutpage", "/profile"];
 
-  // Проверка токена при первой загрузке приложения
+  // Проверка tokena
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
@@ -86,9 +86,9 @@ const AppContent = () => {
         <Route path="/spain" element={<SpainCourse />} />
         <Route path="/french" element={<FrenchCourse />} />
         <Route path="/ukrainian" element={<UkrainianCourse />} />
-        <Route path="*" element={<Error />} />
         <Route path="/profile" element={<Profile />} />
         <Route path='/coursespage' element={<CoursesPage/>}/>
+        <Route path='/loading' element={<Loading/>}/>
       </Routes>
     </>
   );

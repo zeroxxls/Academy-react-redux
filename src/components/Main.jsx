@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-import Loading from './Loading'
 import "./styles/Main.css"
 
 const Main = ()=>{

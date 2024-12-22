@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { login } from "../features/userSlice";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom"; // Импортируем useNavigate
+import { useNavigate } from "react-router-dom"; 
 import { Link } from 'react-router-dom'
 import './styles/LoginPage.css';
 
@@ -10,7 +10,7 @@ const LoginPage = () => {
     const [password, setPassword] = useState("");    
 
     const dispatch = useDispatch();
-    const navigate = useNavigate(); // Инициализируем useNavigate
+    const navigate = useNavigate(); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,7 +29,7 @@ const LoginPage = () => {
             localStorage.setItem("user", JSON.stringify({ id: data.user.id, name: data.user.name, email: data.user.email }));
             localStorage.setItem("token", data.token);
             dispatch(login({ id: data.user.id, name: data.user.name, email: data.user.email, loggedIn: true }));
-            navigate("/profile"); // Переход на страницу профиля
+            navigate("/profile"); 
           } else {
             alert(data.message);
           }

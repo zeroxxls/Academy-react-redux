@@ -3,7 +3,7 @@ export const fetchUserData = async (userId, token) => {
       const response = await fetch(`http://localhost:5001/api/users/${userId}`, {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${token}`, // Токен для авторизации
+          'Authorization': `Bearer ${token}`, // token for auth
         },
       });
   

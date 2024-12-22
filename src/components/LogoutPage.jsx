@@ -11,7 +11,7 @@ const LogoutPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Обработчик выхода
+
   const handleLogout = () => {
     dispatch(logout());
     navigate("/loginpage");

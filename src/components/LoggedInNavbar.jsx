@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react';
 import logo from '../pictures/logo.svg';
 import SideBar from './SideBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux"; // Исправлено: импорт dispatch
+import { useDispatch } from "react-redux";
 import { Link } from 'react-router-dom'
-import { signUp } from "../features/userSlice"; // Импорт действия signUp из userSlice
+import { signUp } from "../features/userSlice";
 import "./styles/SignUp.css";
 
 const SignUp = () => {
@@ -14,7 +14,7 @@ const SignUp = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
-  const dispatch = useDispatch(); // Исправлено: использование dispatch
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,7 +63,7 @@ const SignUp = () => {
 
       if (response.ok) {
         dispatch(signUp(data.user)); 
-        navigate("/profile", { state: { user: data.user } }); // Переход на страницу профиля
+        navigate("/profile", { state: { user: data.user } });
       } else {
         alert(data.message || "An error occurred during registration.");
       }

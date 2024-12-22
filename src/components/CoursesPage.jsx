@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CoursesCards from './CoursesCards';
-import Footer from './Footer';
-import './styles/CoursesPage.css';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 // import { useNavigate } from 'react-router-dom'; 
 // import {useSelector} from 'react-redux';
+import CoursesCards from './CoursesCards';
+import Footer from './Footer';
+import Loading from './Loading';
+import './styles/CoursesPage.css';
 import { addToCart } from '../features/cartSlice';
 
 const CoursesPage = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedCourse, setSelectedCourse] = useState(null); // Для модального окна
+  const [selectedCourse, setSelectedCourse] = useState(null); // for modal window
   const cart = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   // const navigate = useNavigate();
@@ -34,15 +35,14 @@ const CoursesPage = () => {
   }, []);
 
   const handleEnrollClick = (course) => {
-    setSelectedCourse(course); // Показываем модальное окно с информацией
+    setSelectedCourse(course); //modal info 
   };
 
   const handleAddToCart = (course) => {
     // if (!isAuthenticated) {
-    //   navigate('/loginpage'); // Редирект на страницу логина
-    //   return; // Останавливаем выполнение функции, если пользователь не авторизован
+    //   navigate('/loginpage'); // redirekt
+    //   return; //
     // }
-    // // Если пользователь авторизован, добавляем курс в корзину
     const isCourseInCart = cart.some((item) => item.title === course.title);
 
     if (isCourseInCart) {
@@ -51,15 +51,15 @@ const CoursesPage = () => {
     } 
     
     dispatch(addToCart(course)); 
-    setSelectedCourse(null); // Закрываем модальное окно
+    setSelectedCourse(null); //закрываем когда покупаем
   };
 
   const handleCloseModal = () => {
-    setSelectedCourse(null); // Закрываем модальное окно
+    setSelectedCourse(null); // закрываем по нажатию
   };
 
   if (loading) {
-    return <p>Loading courses...</p>;
+    return <Loading/>;
   }
 
   return (
@@ -70,7 +70,7 @@ const CoursesPage = () => {
           <CoursesCards
             key={course._id}
             course={course}
-            onEnrollClick={() => handleEnrollClick(course)} // Открытие модального окна
+            onEnrollClick={() => handleEnrollClick(course)}
           />
         ))}
       </div>

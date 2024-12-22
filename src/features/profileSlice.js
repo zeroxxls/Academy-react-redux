@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  userCourses: [], // Список купленных курсов
+  userCourses: [], 
 };
 
 const profileSlice = createSlice({
@@ -9,12 +9,12 @@ const profileSlice = createSlice({
   initialState,
   reducers: {
     addCourseToProfile: (state, action) => {
-      state.userCourses.push(action.payload); // Добавляем курс в список
+      state.userCourses.push(action.payload); // add Course into list
     },
     removeFromProfile: (state, action) => {
       state.userCourses = state.userCourses.filter(
         (item) => item._id !== action.payload
-      ); // Удаляем курс по ID
+      ); // delete with id
     },
   },
 });
