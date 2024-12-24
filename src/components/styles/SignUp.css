@@ -13,6 +13,9 @@
     flex-direction: column;
     justify-content: center; 
     } 
+    .signUp__form span{
+        color: red;
+    }
         
     .signUp__form> h1 { 
     color: black;     
